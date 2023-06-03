@@ -1,17 +1,13 @@
 apiVersion: v1
 entries:
-  compliance-evolution:
+  compliance-frontend:
   - apiVersion: v2
-    appVersion: 0.1.0
-    created: "2022-04-27T15:51:39.009929181Z"
-    description: A helm chart for compliance-frontend
-    digest: 85059a2aa96d91f2fe9ce21005894eee021dfd988465a81713903533f195fd05
-    maintainers:
-    - email: mpanichella@live.com
-      name: mpanichella
-    name: compliance-evolution
+    created: "2023-06-03T18:33:32.037801811Z"
+    description: A Helm chart for Kubernetes
+    digest: 280a90ea30f75447607031a583e99ceb0ae287c84ae2d5f53ebad113abca3a68
+    name: compliance-frontend
     type: application
     urls:
-    - https://github.com/wsdesarrollo/compliance-evolution/releases/download/compliance-frontend/compliance-frontend.tgz
-    version: 0.1.3
-generated: "2023-06-03T05:55:46.188654406Z"
+    - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230603.10.tgz
+    version: "20230603.10"
+generated: "2023-06-03T18:33:32.037025396Z"
