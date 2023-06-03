@@ -2,7 +2,16 @@ apiVersion: v1
 entries:
   compliance-frontend:
   - apiVersion: v2
-    created: "2023-06-03T18:33:32.037801811Z"
+    created: "2023-06-03T19:40:28.16379152Z"
+    description: A Helm chart for Kubernetes
+    digest: e735b6f3f528aab03f7f9104f9440498f5dce2483a355094a5e1cb9bc381b22a
+    name: compliance-frontend
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230603.11.tgz
+    version: "20230603.11"
+  - apiVersion: v2
+    created: "2023-06-03T19:40:28.157869758Z"
     description: A Helm chart for Kubernetes
     digest: 280a90ea30f75447607031a583e99ceb0ae287c84ae2d5f53ebad113abca3a68
     name: compliance-frontend
@@ -10,4 +19,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230603.10.tgz
     version: "20230603.10"
-generated: "2023-06-03T18:33:32.037025396Z"
+generated: "2023-06-03T19:40:28.157066709Z"
