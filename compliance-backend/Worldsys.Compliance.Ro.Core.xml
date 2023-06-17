@@ -1,0 +1,709 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Worldsys.Compliance.Ro.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion">
+            <summary>
+            Representa la ejecución de un control.
+            </summary>
+            <summary>
+            Representa la ejecución de un control.
+            Version: 4
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.ControlId">
+            <summary>
+            Id del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.PrevEjecutionId">
+            <summary>
+            Id de ejecución anterior.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.NextEjecutionId">
+            <summary>
+            Id de la siguiente ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.CreatedOnUtc">
+            <summary>
+            Fecha y hora de creación (UTC)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.CreatedByUserId">
+            <summary>
+            Id de usuario que creó la ejecución del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.AsignadoOUId">
+            <summary>
+            Id de la unidad organizativa asignada a ejecutar el control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.AsignadoUserId">
+            <summary>
+            Id del usuario asignado a ejecutar el control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.NotaPlanificacionId">
+            <summary>
+            Nota o instrucción del usuario que realiza la planificación al usuario que realiza la tarea.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.FechaInicioProgramada">
+            <summary>
+            Fecha de inicio de evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.FechaFinalProgramada">
+            <summary>
+            Fecha programada de finalización de la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.FechaEjecucionUtc">
+            <summary>
+            Fecha y hora de ejecución del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.EjecutorUserId">
+            <summary>
+            Id del usuario que ejecutó el control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.Efectividad">
+            <summary>
+            Nivel de efectividad del control en su propósito.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.ComentarioEjecucionId">
+            <summary>
+            Dictamen de ejecución realizado por el usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.WorkflowInstanceId">
+            <summary>
+            Id de instancia de workflow.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.Control">
+            <summary>
+            Control asociado a esta ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.CreatedBy">
+            <summary>
+            Usuario que creó la ejecución del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.AsignadoOU">
+            <summary>
+            Unidad organizativa asignada a ejecutar el control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.AsignadoUser">
+            <summary>
+            Usuario asignado a ejecutar el control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.EjecutorUser">
+            <summary>
+            Usuario que ejecutó el control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.NotaPlanificacion">
+            <summary>
+            Nota o instrucción del usuario que realiza la planificación al usuario que realiza la tarea.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.ComentarioEjecucion">
+            <summary>
+            Dictamen de ejecución realizado por el usuario.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionSystemLog">
+            <summary>
+            Registro de acciones realizadas sobre la ejecución de un control.
+            </summary>
+            <summary>
+            Registro de acciones realizadas sobre la ejecución de un control.
+            Version: 1
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionSystemLog.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionSystemLog.ControlEjecucionId">
+            <summary>
+            Id de ejecución de control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionSystemLog.LogData">
+            <summary>
+            Información registrada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionSystemLog.ControlEjecucion">
+            <summary>
+            Ejecución de control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionSystemLog.CreatorUser">
+            <summary>
+            Usuario que creo el registro.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation">
+            <summary>
+            Representa una evaluación de riesgos.
+            </summary>
+            <summary>
+            Representa una evaluación de riesgos.
+            Version: 3
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.RiskNodeId">
+            <summary>
+            Id del nodo evaluado del mapa de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.PrevEvaluationId">
+            <summary>
+            Id de la evaluación anterior.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.NextEvaluationId">
+            <summary>
+            Id de la evaluación siguiente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.CreatedOnUtc">
+            <summary>
+            Fecha y hora de creación (UTC)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.CreatedByUserId">
+            <summary>
+            Id de usuario que creó la evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.AsignadoOUId">
+            <summary>
+            Id de la unidad organizativa asignada a tratar la evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.AsignadoUserId">
+            <summary>
+            Id del usuario asignado a tratar la evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.NotaPlanificacionId">
+            <summary>
+            Nota o instrucción del usuario que realiza la planificación al usuario que realiza la tarea.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.FechaInicioProgramada">
+            <summary>
+            Fecha de inicio de evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.FechaFinalProgramada">
+            <summary>
+            Fecha programada de finalización de la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.FechaEvaluacionUtc">
+            <summary>
+            Fecha y hora de evaluación (UTC).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.EvaluadorUserId">
+            <summary>
+            Id del usuario que realizó la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.ComentarioEvaluacionId">
+            <summary>
+            Dictamen de evaluación realizado por el usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.Impacto">
+            <summary>
+            Valor de impacto.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.Probabilidad">
+            <summary>
+            Valor de probabilidad.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.RiesgoInherente">
+            <summary>
+            Riesgo inherente calculado para la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.AjusteRiesgoResidual">
+            <summary>
+            Valor de ajuste del riesgo residual.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.RiesgoResidual">
+            <summary>
+            Riesgo residual de la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.DetalleMitigacionId">
+            <summary>
+            Detalle sobre la mitigación del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.DetalleControlesId">
+            <summary>
+            Detalle de controles a realizar para controlar el riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.RiesgoPorNoSegregacion">
+            <summary>
+            Indica si el riesgo es por falta de segregación de funciones.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.DetalleRiesgoPorNoSegregacionId">
+            <summary>
+            Detalle de riesgo por no segregación de funciones.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.EstrategiaDeMitigacion">
+            <summary>
+            Estrategia utilizada para mitigar el riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.WorkflowInstanceId">
+            <summary>
+            Id de instancia de workflow.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.RiskNode">
+            <summary>
+            Nodo evaluado del mapa de riesgos
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.CreatedBy">
+            <summary>
+            Usuario que creó la evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.AsignadoOU">
+            <summary>
+            Unidad organizativa asignada a tratar la evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.AsignadoUser">
+            <summary>
+            Usuario asignado a tratar la evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.EvaluadorUser">
+            <summary>
+            Usuario que realizó la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.NotaPlanificacion">
+            <summary>
+            Nota o instrucción del usuario que realiza la planificación al usuario que realiza la tarea.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.ComentarioEvaluacion">
+            <summary>
+            Dictamen de evaluación realizado por el usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.DetalleMitigacion">
+            <summary>
+            Detalle sobre la mitigación del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.DetalleControles">
+            <summary>
+            Detalle de controles a realizar para controlar el riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.DetalleRiesgoPorNoSegregacion">
+            <summary>
+            Detalle de riesgo por no segregación de funciones.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog">
+            <summary>
+            Registro de acciones realizadas sobre la evaluación de riesgos.
+            </summary>
+            <summary>
+            Registro de acciones realizadas sobre la evaluación de riesgos.
+            Version: 1
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog.EvaluationId">
+            <summary>
+            Id de evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog.LogData">
+            <summary>
+            Información registrada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog.Evaluation">
+            <summary>
+            Evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog.CreatorUser">
+            <summary>
+            Usuario que creo el registro.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Parametrization.RoControl">
+            <summary>
+            Representa la definición de una tarea de control sobre elementos de la organización que afectan a riesgos identificados.
+            </summary>
+            <summary>
+            Representa la definición de una tarea de control sobre elementos de la organización que afectan a riesgos identificados.
+            Version: 5
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.AssociatedRiskCount">
+            <summary>
+            Cantidad de riesgos asociados al control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.Name">
+            <summary>
+            Nombre del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.Documentation">
+            <summary>
+            Documentación del control incluyendo el procedimiento para realizarlo, los factores (riesgo) mitagados por el control, etc.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.ResponsibleOUId">
+            <summary>
+            Id de la unidad organizativa responsable por este control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.TipoMitiganteId">
+            <summary>
+            Id de tipo de mitigante (descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.TipoMotivoFactorId">
+            <summary>
+            Id de motivo o factor (descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.Frecuencia">
+            <summary>
+            Fecuencia en días para ejecución automática del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.EjecucionState">
+            <summary>
+            Estado actual de ejecución del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.WorkflowDefinitionId">
+            <summary>
+            Id de workflow.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.ResponsibleOU">
+            <summary>
+            Unidad organizativa responsable de este control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.TipoMitigante">
+            <summary>
+            Tipo de mitigante.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.TipoMotivoFactor">
+            <summary>
+            Tipo de motivo o factor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoControl.RelatedRisks">
+            <summary>
+            Colección de riesgos relacionados a este control.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Parametrization.RoRelationControlRisk">
+            <summary>
+            Configura la relación entre controles y riesgos.
+            Los controles pueden relacionarse a uno o más riesgos, permitiendo de esta forma que la ejecución de un controles dispere múltiples evaluaciones de risgos.
+            </summary>
+            <summary>
+            Configura la relación entre controles y riesgos.
+            Los controles pueden relacionarse a uno o más riesgos, permitiendo de esta forma que la ejecución de un controles dispere múltiples evaluaciones de risgos.
+            Version: 1
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRelationControlRisk.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRelationControlRisk.RiskId">
+            <summary>
+            Id de riesgo.
+            Sólo nodos del árbol de tipo Risk deben relacionarse.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRelationControlRisk.ControlId">
+            <summary>
+            Id de control
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap">
+            <summary>
+            Representa el mapa de riesgos de una organización
+            </summary>
+            <summary>
+            Representa el mapa de riesgos de una organización.
+            Version: 4
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.ParentId">
+            <summary>
+            Id del nodo padre de este nodo o __root__ si este nodo es un nodo raíz.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.RootId">
+            <summary>
+            Id del nodo raíz de este nodo o null si este es un nodo raíz.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.Kind">
+            <summary>
+            Tipo de nodo del mapa de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.State">
+            <summary>
+            Estado actual del nodo del mapa de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.EvaluationState">
+            <summary>
+            Estado de evaluación del nodo del mapa de reisgo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.Name">
+            <summary>
+            Nombre de la sección o riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.ResponsibleOUId">
+            <summary>
+            Id de la unidad organizativa responsable de este nodo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.Notes">
+            <summary>
+            Notas, descripciones u observaciones.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.DisableEvaluation">
+            <summary>
+            Desabilita la evaluación del riesgo. Si es true, no se podrá lanzar la evaluación del riesgo, ya sea manual o automáticamente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.DisableEvaluationReason">
+            <summary>
+            Razón por la cual se deshabilitó la evaluación del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.Impacto">
+            <summary>
+            Valor de impacto indicado en la última evaluación registrada del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.Probabilidad">
+            <summary>
+            Valor de probabilidad indicado en la última evaluación registrada del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.RiesgoInherente">
+            <summary>
+            Valor del riesgo inherente calculado en la última evaluación registrada del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.AjusteRiesgoResidual">
+            <summary>
+            Valor para el ajuste de riesgo residual indicado en la última evaluación registrada del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.RiesgoResidual">
+            <summary>
+            Valor del riesgo residual calculado en la última evaluación registrada del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.RiesgoPorNoSegregacion">
+            <summary>
+            Valor para el riesgo por no segregación indicado en la última evaluación registrada del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.EstrategiaDeMitigacion">
+            <summary>
+            Valor de estrategia de mitigación indicada en la última evaluación registrada del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.TendenciaRiesgoInherente">
+            <summary>
+            Tendencia del riesgo inherente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.TendenciaRiesgoResidual">
+            <summary>
+            Tendencia del riesgo residual.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.WorkflowDefinitionId">
+            <summary>
+            Id de definición de workflow.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.RiskEvaluationId">
+            <summary>
+            Id de la última evaluación de riesgos registrada.
+            La evaluación de riesgos aquí registrada es la que provee los valores de estado actual del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.WorstChildEvaluationId">
+            <summary>
+            Id de evalaución del nodo hijo que dió origen a la evaluación de este nodo como la peor evaluación al momento de su ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.ResponsibleOU">
+            <summary>
+            Unidad organizativa responsable de este nodo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.RiskEvaluation">
+            <summary>
+            Ultima evaluación de riesgos registrada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.WorstChildEvaluation">
+            <summary>
+            Evalaución del nodo hijo que dió origen a la evaluación de este nodo como la peor evaluación al momento de su ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.Typifications">
+            <summary>
+            Tipificaciones relacionadas al nodo del mapa de riesgos.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification">
+            <summary>
+            Tipificación de nodos de mapa de riesgos.
+            </summary>
+            <summary>
+            Tipificación de nodos de mapa de riesgos.
+            Version: 1
+            </summary>
+            <remarks>
+            Esta entidad tipifica los nodos de mapa de riesgos asociando los mismos a una o más descripción, tipificadas a su vez por la clave de partición de la tabla descriptiva.
+            </remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification.RiskNodeId">
+            <summary>
+            Id del nodo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification.DescriptionId">
+            <summary>
+            Id de descripción (Descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification.Kind">
+            <summary>
+            Tipo de tipificación.
+            Almacena la PartitionKey de la tabla descriptiva solo para poder tipificar esta entidad.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification.Description">
+            <summary>
+            Descripción relacionada a esta tipificación.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.RoCoreModule">
+            <summary>
+            A module definition class is generally located in its own assembly and implements
+            some action in module events on application startup and shutdown. It also defines
+            depended modules.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoCoreModule.Initialize">
+            <summary>
+            This method is used to register dependencies for this module.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Universal.RoClobData">
+            <summary>
+            Almacena información Clob del módulo.
+            </summary>
+            <summary>
+            Almacena información Clob del módulo.
+            Version: 1
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.Universal.RoClobData.CreateNew(System.Int32,System.String)">
+            <summary>
+            Crea una nueva instancia inicializada de <see cref="T:Worldsys.Compliance.RoModule.Universal.RoClobData"/>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Universal.RoClobData.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Universal.RoClobData.Data">
+            <summary>
+            Información.
+            </summary>
+        </member>
+    </members>
+</doc>
