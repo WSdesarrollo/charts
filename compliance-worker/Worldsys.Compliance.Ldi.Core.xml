@@ -1,0 +1,1003 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Worldsys.Compliance.Ldi.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig"/> representa la configuración de un control de cartera.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.TenantId">
+            <summary>
+            Identificación del suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.Name">
+            <summary>
+            Nombre del control de cartera.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SegmentName">
+            <summary>
+            Nombre del segmento de datos.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SearchConfigurationId">
+            <summary>
+            Identificación de la configuración de búsqueda.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SearchName">
+            <summary>
+            <see langword="true"/> si debe buscar por denominación
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SearchDocument">
+            <summary>
+            <see langword="true"/> si debe buscar por documento.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SearchIdTributaria">
+            <summary>
+            <see langword="true"/> si debe buscar por identificación tributaria.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SearchModifiedPeopleOnly">
+            <summary>
+            <see langword="true"/> si debe buscar sólamente personas modificadas, de lo contrario <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SerializedScheduleConfiguration">
+            <summary>
+            Serialización de la configuración de programación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SerializedSourceKindAlertConfiguration">
+            <summary>
+            Serialización de la configuración de generación de alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SearchConfiguration">
+            <summary>
+            Configuración de búsqueda.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord"/> registra información relacionada a la ejecución de controles.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.ExecutionId">
+            <summary>
+            Identificación de ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.ControlId">
+            <summary>
+            Identificación del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.TenantId">
+            <summary>
+            Identificación del suscriptor-
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.SerializedSearchConfiguration">
+            <summary>
+            Serialización de la configuración usada para ejecutar el control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.State">
+            <summary>
+            Estado del proceso.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.CreatedBy">
+            <summary>
+            Identificación del usuario que lanzó el proceso.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.CreatedOnUtc">
+            <summary>
+            Fecha y hora de creación del registro.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.StartedOnUtc">
+            <summary>
+            Fecha y hora de inicio de proceso.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.EnddedAtUtc">
+            <summary>
+            Fecha y hora del final del proceso.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.FechaNovedad">
+            <summary>
+            Fecha de novedad de <b>Listas de Informados</b>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.TotalPeople">
+            <summary>
+            Cantidad total de personas a procesar.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.TotalEvaluatedPeople">
+            <summary>
+            Cantidad de personas evaluadas.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.TotalSkippedPeople">
+            <summary>
+            Cantidad de personas omitidas.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.FailureReason">
+            <summary>
+            Detalle de la razón de fallo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlRecord.Control">
+            <summary>
+            Control de cartera asociado a este registro.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord"/> representa el registro de control de una persona contra un control de cartera.
+            Version: 4
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.TenantId">
+            <summary>
+            Identificación del suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.PersonId">
+            <summary>
+            Identificación de la persona.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.ControlId">
+            <summary>
+            Identificación del control de cartera.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.CreatedOnUtc">
+            <summary>
+            Fecha y hora de creación del registro.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.State">
+            <summary>
+            Estado de control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.LastEvaluationId">
+            <summary>
+            Identificación de la última evaluación registrada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.LastExecutionId">
+            <summary>
+            Identificación de la última ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.LastCheckedExecutionId">
+            <summary>
+            Identificación de la última ejecución que evaluó a la persona.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.LastCheckedOnUtc">
+            <summary>
+            Fecha y hora de la última evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.CheckedOnFechaNovedad">
+            <summary>
+            Fecha de novedad al momento de evaluar.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.ProcessCount">
+            <summary>
+            Cantidad de veces que se proceso a la persona.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.Person">
+            <summary>
+            Persona evaluada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.Control">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig"/> asociado a este registro.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.PersonControlRecord.LastEvaluation">
+            <summary>
+            La <see cref="T:Worldsys.Compliance.LdiModule.Evaluation"/>.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert">
+            <summary>
+            Representa una alerta por encuentro en fuentes de LDI del tipo o tipos especificados.
+            </summary>
+            <remarks>Version: 3</remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.AlertName">
+            <summary>
+            Nombre de la alerta asignada por el usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.BatchControlConfigId">
+            <summary>
+            Id del control de cartera.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.BatchControlRecordId">
+            <summary>
+            Id del registro de control de ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.PersonControlRecordId">
+            <summary>
+            Id del registro de control de persona.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.EvaluationId">
+            <summary>
+            Id de evaluación que da origen a la alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.CreatedOnUtc">
+            <summary>
+            Fecha y hora de creación de la alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.CreatedByUserId">
+            <summary>
+            Id de usuario que crea la alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.WorkflowInstanceId">
+            <summary>
+            Id instancia de workflow.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.ExpirationDate">
+            <summary>
+            Fecha de vencimiento de la alerta (opcional).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.TreatedOnUtc">
+            <summary>
+            Fecha de tratamiento de la alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.TreatedByUserId">
+            <summary>
+            Id de usuario que trata la alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.Opinion">
+            <summary>
+            Dictamen de tratamiento de la alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.SerializedConfiguration">
+            <summary>
+            Serialización de la configuración de la alerta al momento de la creación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.TenantId">
+            <summary>
+            Identificación del suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.BatchControlConfig">
+            Navigational properties
+            
+            
+            <summary>
+            Configuración del control de cartera.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.BatchControlRecord">
+            <summary>
+            Registro de control de ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.PersonControlRecord">
+            <summary>
+            Registro de control de persona.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.Evaluation">
+            <summary>
+            Evaluación que da origen a la alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.CreatedByUser">
+            <summary>
+            Usuario que creó la alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlert.TreatedByUser">
+            <summary>
+            Usuario que trató la alerta.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlertAttachment">
+            <summary>
+            Indice de documentos asociados a alertas por tipos de fuente.
+            </summary>
+            <summary>
+            Indice de documentos asociados a alertas por tipos de fuente.
+            Version: 1
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlertAttachment.AlertId">
+            <summary>
+            Id de alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlertAttachment.BinaryObjectId">
+            <summary>
+            Id del documento en la tabla BinaryObject.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlertAttachment.Description">
+            <summary>
+            Título asignado al documento.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlertAttachment.Notes">
+            <summary>
+            Notas
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlertAttachment.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.SourceKindBatchControlAlertAttachment.BinaryObject">
+            <summary>
+            Bits del adjunto.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchConfiguration">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.SearchConfiguration"/> representa la configuración de búsqueda que aplica al usar el servicio.
+            </summary>
+            <remarks>Version: 5</remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchConfiguration.TenantId">
+            <summary>
+            Identificación del tenant.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchConfiguration.Name">
+            <summary>
+            Nombre de la configuración.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchConfiguration.IsDefault">
+            <summary>
+            <see langword="true"/> si esta es la configuración predeterminada, de lo contrario <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchConfiguration.FactorSimilitud">
+            <summary>
+            Factor de similitud.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchConfiguration.FactorSimilitudInverso">
+            <summary>
+            Factor de similitud inverso.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchConfiguration.RequireNameAndDocument">
+            <summary>
+            <see langword="true"/> si el momento de evaluar se debe buscar nombre y documento
+            o identificación tributaria en combinación. Si se especifica ambos datos deben 
+            ser provistos para realizar la búsqueda.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchConfiguration.SerializedSources">
+            <summary>
+            Serialización de la colección de fuentes en las cuales de realiza la búsqueda.
+            </summary>
+            <remarks>
+            	<para>Esta propiedad contendrá la serialización del array <see cref="T:Worldsys.Compliance.LdiModule.HostSourceDto"/>.</para>
+            </remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchConfiguration.BulletinsSearchConfig">
+            <summary>
+            Serialización de la configuración de búsqueda en boletines.
+            </summary>
+            <remarks>
+            	<para>Esta propiedad contendrá la serialización de <see cref="T:Worldsys.Compliance.LdiModule.HostBulletinsSearchConfigurationDto"/>.</para>
+            </remarks>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.BusinessExtensions">
+            <summary>
+            Extensiones de utilidad de negocios.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.BusinessExtensions.IsSearchByDocument(Worldsys.Compliance.LdiModule.Evaluation)">
+            <summary>
+            <see langword="true"/> si la búsqueda se realizó por documento de lo contrario <see langword="false"/>.
+            </summary>
+            <param name="evaluation">Una <see cref="T:Worldsys.Compliance.LdiModule.Evaluation"/>.</param>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.HostBulletinsCountry">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.HostBulletinsCountry"/> representa una opción seleccionable en la búsqueda
+            en boletines oficiales para filtrar por el país al cual pertenece el boletín.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsCountry.Code">
+            <summary>
+            Código del país.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsCountry.Name">
+            <summary>
+            Nombre del país.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsCountry.IsEnabled">
+            <summary>
+            <see langword="true"/> si está habilitado o <see langword="false"/> si no lo está.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.HostBulletinsCountryRegion">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.HostBulletinsCountryRegion"/> representa una opción seleccionable en la búsqueda
+            en boletines oficiales para filtrar por la región o provincia de un país al cual pertenece
+            el boletín.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsCountryRegion.CountryId">
+            <summary>
+            Identificación del país al cual pertenece esta región.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsCountryRegion.Code">
+            <summary>
+            Código del país.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsCountryRegion.Name">
+            <summary>
+            Nombre del país.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsCountryRegion.IsEnabled">
+            <summary>
+            <see langword="true"/> si está habilitado o <see langword="false"/> si no lo está.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsCountryRegion.Country">
+            <summary>
+            País al cual pertenece esta región.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.HostBulletinsTerm">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.HostBulletinsTerm"/> representa una opción seleccionable en la búsqueda
+            en boletines oficiales para filtrar por un término que pueda encontrarse en el boletín.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsTerm.Term">
+            <summary>
+            Término a buscar.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostBulletinsTerm.IsEnabled">
+            <summary>
+            <see langword="true"/> si está habilitado o <see langword="false"/> si no lo está.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.HostSource">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.HostSource"/> representa una fuente de información provista por <b>Listas de Informados</b>.
+            </summary>
+            <remarks>
+            <para>Version: 3</para>
+            <para>Las fuentes de <b>Listas de Informados</b> son las que agrupan los nombres en el servicio de búsqueda.</para>
+            <para>Las fuentes de Wordlsys son las que tienen null en TenantId mientras que las que tienen son fuentes propias del cliente.</para>
+            </remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSource.Name">
+            <summary>
+            Nombre o código de la fuente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSource.KindId">
+            <summary>
+            Identificación del tipo de fuente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSource.Caption">
+            <summary>
+            Nombre descriptivo de la fuente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSource.IsEnabled">
+            <summary>
+            <see langword="true"/> si la fuente está habilitada, de lo contrario <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSource.Description">
+            <summary>
+            Descripción de la fuente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSource.RequiredFeature">
+            <summary>
+            Característica requerida para utilizar la fuente (opcional).
+            </summary>
+            <remarks>
+            <para>Esta propiedad especifica que características (feature) debe poseer el tenant para usar la fuente.</para>
+            </remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSource.LogoUrl">
+            <summary>
+            Dirección Url del logo de la fuente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSource.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+            <remarks>Cuando la fuente tiene Id de suscriptor, es porque es una fuente propia.</remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSource.Kind">
+            <summary>
+            Tipo de esta fuente.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.HostSourceKind">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.HostSourceKind"/> representa un tipo de fuente provista por <b>Listas de Informados</b>.
+            </summary>
+            <remarks>
+            <para>Los HostSourceKind NO son multi-tenant y sólo pueden ser editados por Worldsys internamente.</para>
+            </remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSourceKind.Code">
+            <summary>
+            Código que define el tipo de fuente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.HostSourceKind.Legend">
+            <summary>
+            Leyenda para el usuario.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.HostSourceKind.Equals(Worldsys.Compliance.LdiModule.HostSourceKind)">
+            <summary>
+            Determina si <paramref name="other"/> es igual a este objeto.
+            </summary>
+            <param name="other">Objeto a comparar.</param>
+            <returns>
+            	<see langword="true"/> si <paramref name="other"/> es igual a este objeto, de lo contrario <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.HostSourceKind.Equals(System.Object)">
+            <summary>
+            Determina si <paramref name="obj"/> es igual a este objeto.
+            </summary>
+            <param name="obj">Objeto a comparar.</param>
+            <returns>
+            	<see langword="true"/> si <paramref name="obj"/> es igual a este objeto, de lo contrario <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.HostSourceKind.GetHashCode">
+            <summary>Not required, implemented to avoid warnings.</summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.LdiCoreModule">
+            <summary>
+            A module definition class is generally located in its own assembly and implements
+            some action in module events on application startup and shutdown. It also defines
+            depended modules.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.LdiCoreModule.Initialize">
+            <summary>
+            This method is used to register dependencies for this module.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Evaluation">
+            <summary>
+            Representa la evaluación de un individuo en Listas de Informados.
+            Version: 7
+            </summary>
+            <remarks>
+            	<para><b>Indices</b></para>
+            	<para><c>IX_Evaluation_1</c>: utilizado en la búsqueda de la última evaluación de una identificación.</para>
+            </remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.PrevEvaluationId">
+            <summary>
+            Identificación de la evaluación previa.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.NextEvaluationId">
+            <summary>
+            Identificación de la siguiente evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.TenantId">
+            <summary>
+            Identificación del suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.CreatedOnUtc">
+            <summary>
+            Fecha y hora de creación del registro.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.CreatedById">
+            <summary>
+            Identificación del usuario que creó el registro.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.ServiceKind">
+            <summary>
+            Servicio que realizó la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.Identification">
+            <summary>
+            Identificación del individuo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.PersonId">
+            <summary>
+            Identificación de la persona.
+            </summary>
+            <remarks>Guarda la relación con la futura tabla de personas.</remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.SearchedName">
+            <summary>
+            Nombre buscado.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.SearchedDocument">
+            <summary>
+            Documento buscado.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.SearchedIdTributaria">
+            <summary>
+            Identificación tributaria buscada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.IncludesOwnSources">
+            <summary>
+            <see langword="true"/> si se buscó en fuentes propias del cliente de lo contrario <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.MatchCount">
+            <summary>
+            Cantidad de aciertos devueltos por el motor de búsqueda.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.SystemResult">
+            <summary>
+            Resultado de evaluación calculado por el sistema.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.EvaluationResult">
+            <summary>
+            Resultado de evaluación realizada por el usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.EvaluatedById">
+            <summary>
+            Identificación del usuario que realizó la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.EvaluatedOnUtc">
+            <summary>
+            Fecha y hora de la evaluación del usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.CreatedBy">
+            <summary>
+            Usuario que creó el registro.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.EvaluatedBy">
+            <summary>
+            Usuario que realizó la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.NextEvaluation">
+            <summary>
+            Evaluación siguiente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.Matches">
+            <summary>
+            Colección de <see cref="T:Worldsys.Compliance.LdiModule.EvaluationMatch"/>es asociados a esta evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Evaluation.Bulletins">
+            <summary>
+            Colección de <see cref="T:Worldsys.Compliance.LdiModule.EvaluationBulletin"/>s asociados a esta evaluación.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.EvaluationBulletin">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.EvaluationBulletin"/> representa una coincidencia en boletines 
+            oficiales seleccionada por el usuario para ser registrada.
+            </summary>
+            <remarks>
+            	<para><b>Indices</b></para>
+            	<para><c>IX_EvaluationBulletin_1</c>: utilizado en la búsqueda de boletines por evaluación.</para>
+            </remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.TenantId">
+            <summary>
+            Identificación del suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.EvaluationId">
+            <summary>
+            Identificación de la evaluación a la cual pertenece este boletín.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.Url">
+            <summary>
+            Dirección Url del boletín oficial.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.CountryId">
+            <summary>
+            Identificación del país del boletín.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.Region">
+            <summary>
+            Región o provincia del boletín.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.Year">
+            <summary>
+            Año de boletín.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.Highlighting">
+            <summary>
+            Detalle de la información encontrada provista por el servicio de bósqueda.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.Labels">
+            <summary>
+            Etiquetas asignadas por el usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.Evaluation">
+            <summary>
+            <see cref="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.Evaluation"/> a la cual pertenece este boletín.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationBulletin.Country">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.HostBulletinsCountry"/> del boletín.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.EvaluationClobData">
+            <summary>
+            Almacena la información CLOB de evaluaciones.
+            Version: 1
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationClobData.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationClobData.EvaluationId">
+            <summary>
+            Id de evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationClobData.Opinion">
+            <summary>
+            Dictámen del usuario sobre la evaluación realizada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationClobData.SerializedSourcesSearchRequest">
+            <summary>
+            Serialización de la solicitud de búsqueda en fuentes.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationClobData.SerializedBulletinsSearchRequest">
+            <summary>
+            Serialización de la solicitud de búsqueda en boletines.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.EvaluationMatch">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.EvaluationMatch"/> representa un acierto obtenido desde el servicio de búsqueda.
+            </summary>
+            <remarks>
+            	<para>Version: 3</para>
+            	<para><b>Indices</b></para>
+            	<para><c>IX_EvaluationMatch_1</c>: utilizado en la búsqueda de aciertos por evaluación.</para>
+            </remarks>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.TenantId">
+            <summary>
+            Identificación del suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.EvaluationId">
+            <summary>
+            Identificación de la evaluación a la cual pertence este acierto.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.EvaluationResult">
+            <summary>
+            Resultado de evaluación asignado por el usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.Score">
+            <summary>
+            Score obtenido del motor de búsqueda.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.IsDocumentMatch">
+            <summary>
+            <see langword="true"/> si coincidió por documento, de lo contrario <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.SourceId">
+            <summary>
+            Identificación de la fuente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.SourceKindId">
+            <summary>
+            Identificación dl tipo de fuente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.Name">
+            <summary>
+            Nombre del acierto.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.Document">
+            <summary>
+            Documento del acierto.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.IdTributaria">
+            <summary>
+            Identificación tributaria del acierto.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.Labels">
+            <summary>
+            Etiquetas asignadas por el usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.SerializedResponseDocument">
+            <summary>
+            Serialización del documento de respuesta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.Evaluation">
+            <summary>
+            <see cref="P:Worldsys.Compliance.LdiModule.EvaluationMatch.Evaluation"/> a la cual pertenece este acierto.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.Source">
+            <summary>
+            Fuente del acierto.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.EvaluationMatch.SourceKind">
+            <summary>
+            Tipo de fuente del acierto.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.ServiceUsage">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.ServiceUsage"/> permite registrar el uso de un servicio por un suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.TenantId">
+            <summary>
+            Identificación del suscriptor que utilizó el servicio.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.UserId">
+            <summary>
+            Identificación del usuario que utilizó el servicio.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.TimestampUtc">
+            <summary>
+            Fecha y hora.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.Kind">
+            <summary>
+            Tipo de servicio usado.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.StatusCode">
+            <summary>
+            Código de estado devuelto en la llamada Http.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.Caller">
+            <summary>
+            Método desde el cual se utilizó el servicio.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.TraceId">
+            <summary>
+            Identificación de trazabilidad.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.RemoteIP">
+            <summary>
+            Dirección IP remota.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.UserAgent">
+            <summary>
+            Cadena de agente de usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.PreparationDuration">
+            <summary>
+            Duración del proceso de preparación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.GatewayDuration">
+            <summary>
+            Duración del proceso externo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.ProcessDuration">
+            <summary>
+            Duración del proceso propio de agregado de valor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.ServiceUsage.OverallDuration">
+            <summary>
+            Duración total del proceso.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Tag">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.Tag"/> representa una etiqueta ingresada por un usuario, utilizada para auto-completar etiquetas en la interfaz de usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Tag.TenantId">
+            <summary>
+            Identificación del suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Tag.UserId">
+            <summary>
+            Identificación del usuario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Tag.Value">
+            <summary>
+            Valor de la etiqueta.
+            </summary>
+        </member>
+    </members>
+</doc>
