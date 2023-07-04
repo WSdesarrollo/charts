@@ -6,7 +6,7 @@ RUN groupadd -r backend && useradd -r -g backend -m backend
 # Tell docker that all future commands should run as the nonroot user
 
 WORKDIR /app
-EXPOSE 5000
+EXPOSE 44301
 
 ARG ARTIFACTS_DIRECTORY
 
