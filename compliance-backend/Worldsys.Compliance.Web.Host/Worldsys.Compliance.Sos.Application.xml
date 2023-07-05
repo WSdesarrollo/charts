@@ -4,36 +4,6 @@
         <name>Worldsys.Compliance.Sos.Application</name>
     </assembly>
     <members>
-        <member name="T:Worldsys.Compliance.SosModule.AcumulatorHelpers">
-            <summary>
-            Provee métodos auxiliares relacionados a acumuladores.
-            </summary>
-        </member>
-        <member name="M:Worldsys.Compliance.SosModule.AcumulatorHelpers.BuildAcumulatorIdForQuery(System.String,System.String,System.Int32,System.DateTime,System.Int64,System.Int32)">
-            <summary>
-            Calcula un Id del acumulador basado en los parámetros que puede utilizarse para buscar el acumulador en la tabla.
-            </summary>
-            <param name="columnsQuery">
-                SQL query necesario para extraer los valores de los campos de la tabla de operaciones
-                que conforman el Id del acumulador acorde a la configuracion del mismo.
-            </param>
-            <param name="periodKind">
-                Tipo de período del acumulador: D= Diario, M= Mensual, B= Bimestral, T= Trimestral, 
-                C=Cuatrimestral, S= Semestral o A= Anual.
-            </param>
-            <param name="offset">Offset para calcular la fecha en unidades de período.</param>
-            <param name="today">La fecha actual.</param>
-            <param name="acumulatorConfigId">Id de configuracion del acumulador.</param>
-            <param name="tenantId">Id de suscriptor.</param>
-            <returns>
-                Un Id de acumulador.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="columnsQuery"/> es <see langword="null"/> o está vacío.</para>
-                <para>-o-</para>
-                <para>Cuando <paramref name="periodKind"/> es <see langword="null"/> o está vacío.</para>
-            </exception>
-        </member>
         <member name="T:Worldsys.Compliance.SosModule.AcumulatorRiskLevelRiskMatrixConceptFunction">
             <summary>
             Calcula el índice de riesgo basado en el nivel de riesgo de acumuladores operados por el cliente.
@@ -356,7 +326,7 @@
         <member name="F:Worldsys.Compliance.SosModule.Alerts.AuditoriaIncumplimientoAsyncBackgroundJob.NotifySuccessArgName">
             <summary>Nombre del argumento que indica si se debe notificar el éxito de ejecución.</summary>
         </member>
-        <member name="M:Worldsys.Compliance.SosModule.Alerts.AuditoriaIncumplimientoAsyncBackgroundJob.#ctor(Worldsys.Compliance.Storage.IBinaryObjectManager,Abp.ObjectMapping.IObjectMapper,Worldsys.Compliance.Workflows.WorkflowManager)">
+        <member name="M:Worldsys.Compliance.SosModule.Alerts.AuditoriaIncumplimientoAsyncBackgroundJob.#ctor(Worldsys.Compliance.Storage.IBinaryObjectManager,Abp.ObjectMapping.IObjectMapper,Worldsys.Compliance.Workflows.WorkflowService)">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Alerts.AuditoriaIncumplimientoAsyncBackgroundJob"/>.
             </summary>
@@ -422,7 +392,7 @@
             Nombre del argumento con los Ids a procesar.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.SosModule.Alerts.MarkAlertAsUnusualJob.#ctor(Worldsys.Compliance.SosModule.Alyc.AlycAcumulatorService,Worldsys.Compliance.SosModule.Banking.BankingAcumulatorService,Worldsys.Compliance.SosModule.Concesionarios.ConcesionariosAcumulatorService,Worldsys.Compliance.SosModule.Psp.PspAcumulatorService,Worldsys.Compliance.SosModule.Sgr.SgrAcumulatorService)">
+        <member name="M:Worldsys.Compliance.SosModule.Alerts.MarkAlertAsUnusualJob.#ctor(Worldsys.Compliance.SosModule.Alyc.AlycAcumulatorService,Worldsys.Compliance.SosModule.Banking.BankingAcumulatorService,Worldsys.Compliance.SosModule.Concesionarios.ConcesionariosAcumulatorService,Worldsys.Compliance.SosModule.Cva.CvaAcumulatorService,Worldsys.Compliance.SosModule.Psp.PspAcumulatorService,Worldsys.Compliance.SosModule.Sgr.SgrAcumulatorService)">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Alerts.MarkAlertAsUnusualJob"/>.
             </summary>
@@ -437,7 +407,7 @@
             Implementa los servicios de aplicación para el tratamiento de alertas.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.SosModule.Alerts.SosAlertApplicationService.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Worldsys.Compliance.Timing.ITimeZoneService,Worldsys.Compliance.Storage.IBinaryObjectManager,Worldsys.Compliance.Storage.ITempFileCacheManager,Worldsys.Compliance.Authorization.Users.UserManager,Worldsys.Compliance.Workflows.WorkflowManager,Worldsys.Compliance.Agent.TaskStatusService,Abp.Domain.Repositories.IRepository{Abp.Authorization.Users.UserOrganizationUnit,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.OrganizationUnitEx.OrganizationUnitDetails,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.People.Person,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.People.Customers.Customer,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.People.Customers.CustomerDocument,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Universal.SosCuentaPerson,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlert,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosCase,System.Int64})">
+        <member name="M:Worldsys.Compliance.SosModule.Alerts.SosAlertApplicationService.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Worldsys.Compliance.Timing.ITimeZoneService,Worldsys.Compliance.Storage.IBinaryObjectManager,Worldsys.Compliance.Storage.ITempFileCacheManager,Worldsys.Compliance.Authorization.Users.UserManager,Worldsys.Compliance.Workflows.WorkflowService,Worldsys.Compliance.Agent.TaskStatusService,Abp.Domain.Repositories.IRepository{Abp.Authorization.Users.UserOrganizationUnit,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.OrganizationUnitEx.OrganizationUnitDetails,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.People.Person,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.People.Customers.Customer,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.People.Customers.CustomerDocument,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Universal.SosCuentaPerson,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlert,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosCase,System.Int64})">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Alerts.SosAlertApplicationService"/>:
             </summary>
@@ -1311,7 +1281,7 @@
         <member name="F:Worldsys.Compliance.SosModule.Capture.CaptureAsyncBackgroundJob.SkipImportProcessArgName">
             <summary>Nombre del argumento opcional, que omite la ejecución del proceso de captura.</summary>
         </member>
-        <member name="M:Worldsys.Compliance.SosModule.Capture.CaptureAsyncBackgroundJob.#ctor(Worldsys.Compliance.Storage.IBinaryObjectManager,Abp.ObjectMapping.IObjectMapper,Worldsys.Compliance.RiskMatrix.RiskAssessmentJobLauncher)">
+        <member name="M:Worldsys.Compliance.SosModule.Capture.CaptureAsyncBackgroundJob.#ctor(Worldsys.Compliance.Storage.IBinaryObjectManager,Abp.Configuration.ISettingManager,Abp.ObjectMapping.IObjectMapper,Worldsys.Compliance.RiskMatrix.RiskAssessmentJobLauncher)">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Capture.CaptureAsyncBackgroundJob"/>.
             </summary>
@@ -1754,7 +1724,7 @@
             Reasigna las alertas activas de la persona al nuevo oficial de cuenta del cliente.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.SosModule.CustomerOficialCuentaChangedEventHandler.#ctor(Worldsys.Compliance.Workflows.WorkflowManager,Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Authorization.Users.User,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlert,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog,System.Int64})">
+        <member name="M:Worldsys.Compliance.SosModule.CustomerOficialCuentaChangedEventHandler.#ctor(Worldsys.Compliance.Workflows.WorkflowService,Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Authorization.Users.User,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlert,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog,System.Int64})">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.CustomerOficialCuentaChangedEventHandler"/>.
             </summary>
@@ -1779,6 +1749,337 @@
             <exception cref="T:System.ArgumentException">
                 <para>Lanzada cuando el tenantId es inválido.</para>
             </exception>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Cva.CvaAcumulatorService">
+            <summary>
+            Implementa servicios de acumuladores relacionados al negocio ALYC.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.CvaAcumulatorService.RecomputeRegisteredAcumulatorAsync(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Re-calcula los datos del acumulador <paramref name="id"/> perteneciente al suscriptor <paramref name="tenantId"/>.
+            </summary>
+            <param name="tenantId">Id de suscriptor.</param>
+            <param name="id">Id del acumulador (<c>SosAcumulator</c>) a re-calcular.</param>
+            <exception cref="T:System.ArgumentException">
+                <para>Lanzada cuando <paramref name="tenantId"/> es inválido.</para>
+                <para>-o-</para>
+                <para>Cuando <paramref name="id"/> es <see langword="null"/> o está vacío.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.CvaAcumulatorService.RecomputeRegisteredAcumulatorsAsync(System.Nullable{System.Int32})">
+            <summary>
+            Re-calcula los datos de todos los acumuladores registrados del suscriptor <paramref name="tenantId"/>.
+            </summary>
+            <param name="tenantId">Id de suscriptor.</param>
+            <exception cref="T:System.ArgumentException">
+                <para>Lanzada cuando <paramref name="tenantId"/> es inválido.</para>
+            </exception>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Cva.SosCvaApplicationService">
+            <summary>
+            Implementa los servicios de aplicación del modelo bancario.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaApplicationService.#ctor(Worldsys.Compliance.SosModule.Cva.CvaAcumulatorService)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Cva.SosCvaApplicationService"/>.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaApplicationService.DeleteOperacion(Worldsys.Compliance.SosModule.Universal.DeleteOperacionEditInput)">
+            <summary>
+            Borra físicamente la operación especificada dejando registro del borrado.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaApplicationService.GetOperacion(System.String)">
+            <summary>
+            Recupera la operación con el <paramref name="operacionId"/> especificado.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaApplicationService.GetOperacionesForList(Worldsys.Compliance.SosModule.Cva.SosCvaOperacionListInput)">
+            <summary>
+            Recupera operaciones para la lista de operaciones.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionBusinessProcess0">
+            <summary>
+            Implementa las funciones de negocio correspondientes al proceso de acumuladores y aperturación de operaciones
+            del negocio Compra y Venta Automotor (CVA).
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionBusinessProcess0.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int64},System.String,Worldsys.Compliance.SosModule.SosBusinesses)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionBusinessProcess0"/>.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionBusinessProcess0.ExecuteBusinessRulesForNewOperation(Worldsys.Compliance.Data.Query.SqlServerApi,Worldsys.Compliance.SosModule.Universal.SosCaptureBusinessRulesProcessControl,System.String,System.Boolean)">
+            <summary>
+            Ejecuta la reglas de negocios para una nueva operación.
+            </summary>
+            <param name="dbapi">Api para acceder a la base de datos.</param>
+            <param name="brpc">El registro de control de proceso.</param>
+            <param name="alertConfigurations">Configuraciones de alertas contras las cuales la operación es testeada.</param>
+            <param name="businessRules1"><see langword="true"/> si hay alertas configuradas que el proceso debe ejecutar.</param>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyDataServices">
+            <summary>
+            Servicios de datos de importación de operaciones.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyDataServices.#ctor">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyDataServices"/>.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyDataServices.Upsert(System.Nullable{System.Int32},System.Nullable{System.Int64},Worldsys.Compliance.Data.IDataModel,System.String,System.String)">
+            <summary>
+            Inserta el <paramref name="model"/> en el repositorio de datos.
+            </summary>
+            <remarks>Este método solo inserta nuevas operaciones. No hace update!</remarks>
+            <param name="tenantId">Id de suscriptor.</param>
+            <param name="userId">Id de usuario.</param>
+            <param name="model">Información a insertar en el repositorio.</param>
+            <param name="executionId">Id de ejecución del proceso (opcional).</param>
+            <param name="data">Información adicinal para el proceso (opcional).</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para>Lanzada cuando <paramref name="model"/> es <see langword="null"/>.</para>
+            </exception>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyRepositoryServices">
+            <summary>
+            Servicios para el repositorio de importación de operaciones.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyRepositoryServices.#ctor(Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Descriptive,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Empresa},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Sucursal},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.People.IdentificationType,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Parametrization.SosMoneda,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Authorization.Users.User,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Provincia,System.Int64})">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyRepositoryServices"/>;
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyRepositoryServices.DoesServiceRepositoryAsync(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Detemina si este servicio soporta el repositorio especificado.
+            </summary>
+            <param name="tenantId">Id de suscriptor.</param>
+            <param name="repositoryName">Nombre de repositorio.</param>
+            <returns>
+                <see langword="true"/> si el servicio soporta el repositorio o <see langword="false"/> si no.
+            </returns>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyRepositoryServices.GetColumnsOptionsAsync(System.Nullable{System.Int32},System.String)">
+            <summary>
+            Devuelve las opciones para columnas del repositorio.
+            </summary>
+            <param name="tenantId">Id de suscriptor.</param>
+            <param name="repositoryName">Nombre de repositorio.</param>
+            <returns>
+                Colección de opciones para las columnas del repositorio.
+            </returns>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionCaptureOnlyRepositoryServices.GetRepositoryDataServiceType(System.String)">
+            <summary>
+            Devuelve el <see cref="T:System.Type"/> del servicio de datos del repositorio.
+            </summary>
+            <param name="repositoryName">Nombre del repositorio.</param>
+            <returns>
+                El <see cref="T:System.Type"/> del servicio de datos.
+            </returns>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel">
+            <summary>
+            Registro de operaciones del negocio de Compra y venta de automotores.
+            DataModel for: SosCvaOperacion.
+            </summary>
+            <summary>
+            Registro de operaciones del negocio de Compra y venta de automotores.
+            DataModel for: SosCvaOperacion. Version: 2.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.#ctor">
+            <summary>
+            Crea una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel"/>.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.#ctor(Worldsys.Compliance.SosModule.Cva.SosCvaOperacion)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel"/>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.Id">
+            <summary>
+            Identificación del registro.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.EsManual">
+            <summary>
+            Indica si la operación fue ingresada por el usuario (evento) o si fue capturada desde una interfaz.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.Expansion">
+            <summary>
+            Indica si la operación es original (cero) o si es una expansión de la misma (1,2,3,...) utilizada para registrar la misma operación para otras personas relacionadas.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.ExpansionFromId">
+            <summary>
+            Id de operación desde la cual se realizó la expansión de operaciones.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.ExpansionConfig">
+            <summary>
+            Serialización de la configuración de aperturación utilizada para aperturar la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.AcumulatorInfo">
+            <summary>
+            Serialización de los acumuladores impactados por esta operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.AlertConfigurations">
+            <summary>
+            Configuraciones de alertas contras las cuales la operación es testeada.
+            Serialización de un array de Ids de configuraciones de alertas.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.OperacionNro">
+            <summary>
+            Identificación de la operación. Esta es la identificación proveniente del cliente en la interfaz.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.OperacionTipoId">
+            <summary>
+            Id de tipo de operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.FechaOperacion">
+            <summary>
+            Fecha de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.FechaInformacion">
+            <summary>
+            Fecha de la información o fecha contable
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.PersonId">
+            <summary>
+            Id de la persona relacionada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.CuentaId">
+            <summary>
+            Id de la cuenta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.ProductoId">
+            <summary>
+            Id de producto
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.OrigenFondosId">
+            <summary>
+            Origen de fondos (descripive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.ModalidadPagoId">
+            <summary>
+            Id de modalidad de pago (Descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.CanalOperacionId">
+            <summary>
+            Canal de operación (descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.MonedaOperacionId">
+            <summary>
+            Id de la moneda de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.MontoMonedaOperacion">
+            <summary>
+            Monto de la operación expresado en la moneda de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.MontoMonedaLocal">
+            <summary>
+            Monto de la operación en la moneda local.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.Coeficiente">
+            <summary>
+            Coeficiente de conversión de monedas
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.EmpresaTransaccionId">
+            <summary>
+            Id de empresa de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.SucursalTransaccionId">
+            <summary>
+            Id de la sucursal de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.IdentificacionConcesionarioId">
+            <summary>
+            identificacion del concesionario (descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.ProvinciaConcesionarioId">
+            <summary>
+            Provincia de radicación del concesonario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.VehiculoTipoId">
+            <summary>
+            Tipo de vehículo (descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.VehiculoModelo">
+            <summary>
+            Modelo de vehículo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.VehiculoVersion">
+            <summary>
+            Versión de vehículo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.Comentarios">
+            <summary>
+            Comentarios.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.BusinessRulesIdentfier">
+            <summary>
+            Identificaión del proceso que ejecutó las reglas de negocio.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.SkipBusinessRules0">
+            <summary>
+            Indica que el proceso de reglas de negocios debe excluirse para esta operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.BusinessRules0">
+            <summary>
+            Indica si el proceso de acumuladores y aperturación fue ejecutado o no.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.BusinessRules1">
+            <summary>
+            Indica si el proceso de generación de alertas fue ejecutado o no.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.CreationTime">
+            <summary>ABP CreationTime property.</summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDataModel.CreatorUserId">
+            <summary>ABP CreatorUserId property.</summary>
         </member>
         <member name="T:Worldsys.Compliance.SosModule.ISosOperacionBusinessProcess0">
             <summary>
@@ -3074,7 +3375,7 @@
             Provee información segmentada de SOS.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.SosModule.SosSegmentedInfoService.#ctor(Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Parameterization.Geo.Country,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Descriptive,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Empresa},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Sucursal},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Pais,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Parametrization.SosAcumulatorConfiguration,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Parametrization.SosMoneda,System.Int64})">
+        <member name="M:Worldsys.Compliance.SosModule.SosSegmentedInfoService.#ctor(Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Parameterization.Geo.Country,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Descriptive,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Empresa},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Sucursal},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Pais,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Parametrization.SosAcumulatorConfiguration,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.SosModule.Parametrization.SosMoneda,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Provincia,System.Int64})">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.SosModule.SosSegmentedInfoService"/>.
             </summary>
@@ -3162,6 +3463,42 @@
             <param name="entityId">Id de entidad.</param>
             <param name="from">Fecha desde.</param>
             <param name="to">Fecha hasta.</param>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.SosSegmentedInfoServiceBase">
+            <summary>
+            Provee funciones genéricas para el proveedor de información segmentada de SOS.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.SosSegmentedInfoServiceBase.BuildAcumulatorIdTerm(Worldsys.Compliance.SosModule.Parametrization.SosAcumulatorConfiguration,Worldsys.Compliance.Data.Query.DatabaseObject,System.DateTime,System.String,System.String,System.Int32)">
+            <summary>
+            Construye el Id del acumulador para el filtrado de datos.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.SosSegmentedInfoServiceBase.ComputeRangeStartAndEndOfPeriod(System.DateTime,System.String,System.Int32)">
+            <summary>
+            Calcula el rango para el filtrado de acumuladores.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.SosSegmentedInfoServiceBase.GetAcumulatorColumnDataType(System.String)">
+            <summary>
+            Devuelve el tipo de datos de la columna de datos de un acumulador.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.SosSegmentedInfoServiceBase.GetAcumulatorConfiguration(System.Nullable{System.Int32},System.Int64)">
+            <summary>
+            Devuelve la configuración de un acumulador.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.SosSegmentedInfoServiceBase.GetAcumulatorConfigurationAsync(System.Nullable{System.Int32},System.Int64)">
+            <summary>
+            Devuelve la configuración de un acumulador.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.SosModule.SosSegmentedInfoServiceBase.ProcessAcumulatorRulePredicate(System.Int32,System.Int64,Worldsys.Compliance.Data.Query.DatabaseObject,Worldsys.Compliance.Data.Rules.RulePredicate,Worldsys.Compliance.Data.Segments.Segment)">
+            <summary>
+                Procesa el <paramref name="rulePredicate"/> y devuelve el predicado que será agregado al
+                <paramref name="segment"/>.
+            </summary>
         </member>
         <member name="T:Worldsys.Compliance.SosModule.SosSettingProvider">
             <summary>

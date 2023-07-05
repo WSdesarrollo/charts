@@ -234,6 +234,60 @@
             Razón del cierre forzado.
             </summary>
         </member>
+        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier">
+            <summary>
+            Registra la identificación de un elemento de origen de alerta como un cliente, operación, etc.
+            </summary>
+            <summary>
+            Registra la identificación de un elemento de origen de alerta como un cliente, operación, etc.
+            Version: 2
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.AlertId">
+            <summary>
+            Id de alerta
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.OriginKind">
+            <summary>
+            Tipo de elemento de origen, por ejemplo: DS:{data-set-name}.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.OriginIdentifier">
+            <summary>
+            Id de elemento de origen.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.IsUnusual">
+            <summary>
+            Indica que el elemeto de origen es inusual, porque no se realiza habitualmente pero no es sospechoso.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.IsUnusualTime">
+            <summary>
+            Fecha y hora en que se marcó el elemento de origen como inusual (UTC).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.IsUnusualUserId">
+            <summary>
+            Id del usuario que marcó el element de origen como inusual.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.IsUnusualReason">
+            <summary>
+            Razón por la cual el elemento de origen es inusual.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.Alert">
+            <summary>
+            Alerta.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation">
             <summary>
             Registra la identificaciones de las operaciones que dieron origen a las alertas.
@@ -2078,6 +2132,401 @@
             Razón de borrado
             </summary>
         </member>
+        <member name="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion">
+            <summary>
+            Registro de operaciones del negocio de Compra y venta de automotores.
+            </summary>
+            <summary>
+            Registro de operaciones del negocio de Compra y venta de automotores.
+            Version: 2
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.EsManual">
+            <summary>
+            Indica si la operación fue ingresada por el usuario (evento) o si fue capturada desde una interfaz.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.Expansion">
+            <summary>
+            Indica si la operación es original (cero) o si es una expansión de la misma (1,2,3,...) utilizada para registrar la misma operación para otras personas relacionadas.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.ExpansionFromId">
+            <summary>
+            Id de operación desde la cual se realizó la expansión de operaciones.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.ExpansionConfig">
+            <summary>
+            Serialización de la configuración de aperturación utilizada para aperturar la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.AcumulatorInfo">
+            <summary>
+            Serialización de los acumuladores impactados por esta operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.AlertConfigurations">
+            <summary>
+            Configuraciones de alertas contras las cuales la operación es testeada.
+            Serialización de un array de Ids de configuraciones de alertas.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.OperacionNro">
+            <summary>
+            Identificación de la operación. Esta es la identificación proveniente del cliente en la interfaz.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.OperacionTipoId">
+            <summary>
+            Id de tipo de operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.FechaOperacion">
+            <summary>
+            Fecha de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.FechaInformacion">
+            <summary>
+            Fecha de la información o fecha contable
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.PersonId">
+            <summary>
+            Id de la persona relacionada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.CuentaId">
+            <summary>
+            Id de la cuenta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.ProductoId">
+            <summary>
+            Id de producto
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.OrigenFondosId">
+            <summary>
+            Origen de fondos (descripive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.ModalidadPagoId">
+            <summary>
+            Id de modalidad de pago (Descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.CanalOperacionId">
+            <summary>
+            Canal de operación (descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.MonedaOperacionId">
+            <summary>
+            Id de la moneda de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.MontoMonedaOperacion">
+            <summary>
+            Monto de la operación expresado en la moneda de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.MontoMonedaLocal">
+            <summary>
+            Monto de la operación en la moneda local.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.Coeficiente">
+            <summary>
+            Coeficiente de conversión de monedas
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.EmpresaTransaccionId">
+            <summary>
+            Id de empresa de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.SucursalTransaccionId">
+            <summary>
+            Id de la sucursal de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.IdentificacionConcesionarioId">
+            <summary>
+            identificacion del concesionario (descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.ProvinciaConcesionarioId">
+            <summary>
+            Provincia de radicación del concesonario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.VehiculoTipoId">
+            <summary>
+            Tipo de vehículo (descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.VehiculoModelo">
+            <summary>
+            Modelo de vehículo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.VehiculoVersion">
+            <summary>
+            Versión de vehículo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.Comentarios">
+            <summary>
+            Comentarios.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.BusinessRulesIdentfier">
+            <summary>
+            Identificaión del proceso que ejecutó las reglas de negocio.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.SkipBusinessRules0">
+            <summary>
+            Indica que el proceso de reglas de negocios debe excluirse para esta operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.BusinessRules0">
+            <summary>
+            Indica si el proceso de acumuladores y aperturación fue ejecutado o no.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.BusinessRules1">
+            <summary>
+            Indica si el proceso de generación de alertas fue ejecutado o no.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.OperacionTipo">
+            <summary>
+            Tipo de la operación
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.Person">
+            <summary>
+            Persona relacionada a la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.Producto">
+            <summary>
+            Producto
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.MonedaOperacion">
+            <summary>
+            Moneda de la operación
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.EmpresaTransaccion">
+            <summary>
+            Empresa de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacion.SucursalTransaccion">
+            <summary>
+            Sucursal de la transacción
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion">
+            <summary>
+            Registro de operaciones del negocio de compra y venta de automotores.
+            </summary>
+            <summary>
+            Registro de operaciones del negocio de compra y venta de automotores.
+            Version: 2
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.EsManual">
+            <summary>
+            Indica si la operación fue ingresada por el usuario (evento) o si fue capturada desde una interfaz.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.Expansion">
+            <summary>
+            Indica si la operación es original (cero) o si es una expansión de la misma (1,2,3,...) utilizada para registrar la misma operación para otras personas relacionadas.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.ExpansionFromId">
+            <summary>
+            Id de operación desde la cual se realizó la expansión de operaciones.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.ExpansionConfig">
+            <summary>
+            Serialización de la configuración de aperturación utilizada para aperturar la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.AcumulatorInfo">
+            <summary>
+            Serialización de los acumuladores impactados por esta operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.AlertConfigurations">
+            <summary>
+            Configuraciones de alertas contras las cuales la operación es testeada.
+            Serialización de un array de Ids de configuraciones de alertas.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.OperacionNro">
+            <summary>
+            Identificación de la operación. Esta es la identificación proveniente del cliente en la interfaz.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.OperacionTipoId">
+            <summary>
+            Id de tipo de operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.FechaOperacion">
+            <summary>
+            Fecha de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.FechaInformacion">
+            <summary>
+            Fecha de la información o fecha contable
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.PersonId">
+            <summary>
+            Id de la persona relacionada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.CuentaId">
+            <summary>
+            Id de la cuenta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.ProductoId">
+            <summary>
+            Id de producto
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.OrigenFondosId">
+            <summary>
+            Origen de fondos (descripive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.ModalidadPagoId">
+            <summary>
+            Id de modalidad de pago (Descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.CanalOperacionId">
+            <summary>
+            Canal de operación (descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.MonedaOperacionId">
+            <summary>
+            Id de la moneda de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.MontoMonedaOperacion">
+            <summary>
+            Monto de la operación expresado en la moneda de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.MontoMonedaLocal">
+            <summary>
+            Monto de la operación en la moneda local.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.Coeficiente">
+            <summary>
+            Coeficiente de conversión de monedas
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.EmpresaTransaccionId">
+            <summary>
+            Id de empresa de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.SucursalTransaccionId">
+            <summary>
+            Id de la sucursal de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.IdentificacionConcesionarioId">
+            <summary>
+            Identificacion del concesionario (descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.ProvinciaConcesionarioId">
+            <summary>
+            Provincia de radicación del concesonario.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.VehiculoTipoId">
+            <summary>
+            Tipo de vehículo (descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.VehiculoModelo">
+            <summary>
+            Modelo de vehículo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.VehiculoVersion">
+            <summary>
+            Versión de vehículo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.Comentarios">
+            <summary>
+            Comentarios.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.BusinessRulesIdentfier">
+            <summary>
+            Identificaión del proceso que ejecutó las reglas de negocio.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.SkipBusinessRules0">
+            <summary>
+            Indica que el proceso de reglas de negocios debe excluirse para esta operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.BusinessRules0">
+            <summary>
+            Indica si el proceso de acumuladores y aperturación fue ejecutado o no.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.BusinessRules1">
+            <summary>
+            Indica si el proceso de generación de alertas fue ejecutado o no.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.DeletedOnUtc">
+            <summary>
+            Fecha y hora de borrado.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.DeletedByUserId">
+            <summary>
+            Id del usuario que eliminó la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Cva.SosCvaOperacionDeletion.DeletionReason">
+            <summary>
+            Razón de borrado,
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.SosModule.Parametrization.SosAcumulatorConfiguration">
             <summary>
             Representa la configuración de acumuladores.
@@ -3464,13 +3913,52 @@
             Configuración del acumulador.
             </summary>
         </member>
+        <member name="T:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl">
+            <summary>
+            Esta entidad almacena información de control para diferentes procesos internos de reglas de negocios.
+            </summary>
+            <summary>
+            Esta entidad almacena información de control para diferentes procesos internos de reglas de negocios.
+            Version: 4
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.ProcessIdentifier">
+            <summary>
+            Identificación del proceso al cual pertenece el registro.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.CreatedOnUtc">
+            <summary>
+            Fecha y hora de creación del registro.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.ElementId">
+            <summary>
+            Id del elemento en proceso.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.ExecutionId">
+            <summary>
+            Identificación de ejecución del proceso que está procesando este elemento.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.Data">
+            <summary>
+            Información adicional para el proceso.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.SosModule.Universal.SosCaptureBusinessRulesProcessControl">
             <summary>
             Esta entidad almacena información de control para diferentes procesos internos de reglas de negocios.
             </summary>
             <summary>
             Esta entidad almacena información de control para diferentes procesos internos de reglas de negocios.
-            Version: 1
+            Version: 2
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.SosModule.Universal.SosCaptureBusinessRulesProcessControl.PersonType">
@@ -3501,6 +3989,11 @@
         <member name="P:Worldsys.Compliance.SosModule.Universal.SosCaptureBusinessRulesProcessControl.OperationId">
             <summary>
             Id de operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosCaptureBusinessRulesProcessControl.OperationTableName">
+            <summary>
+            Nombre de la tabla donde se almacena la operación.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.SosModule.Universal.SosCaptureBusinessRulesProcessControl.BusinessRulesIdentifier">

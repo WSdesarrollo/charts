@@ -140,6 +140,21 @@
             Serializes a Hit V1 model.
             </summary>
         </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Api.Packs.LdiApiEcuadorApplicationService">
+            <summary>
+            Servicios de aplicación de la Api pública de LDI.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Api.Packs.LdiApiEcuadorApplicationService.AntecedentesPenalesAsync(System.String)">
+            <summary>
+            Recupera la información de antecedentes penales.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Api.Packs.LdiApiEcuadorApplicationService.ProcesosJudicialesAsync(System.String)">
+            <summary>
+            Recupera la información de procesos judiciales.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.LdiModule.Batch.BatchControlRecordRepository">
             <summary>
             Repositorio de registro de control de controles de cartera.
@@ -221,51 +236,6 @@
                 <para>-o-</para>
                 <para>Cuando <paramref name="batchControlConfigId"/> es menor o igual a cero.</para>
             </exception>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask">
-            <summary>
-            <see cref="T:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask"/> define la tarea de evaluación de cartera en <b>Listas de Informados</b>.
-            </summary>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask.#ctor(Abp.Localization.ILocalizationManager,Abp.Domain.Repositories.IRepository{Worldsys.Compliance.LdiModule.Batch.BatchControlConfig,System.Int64})">
-            <summary>
-            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask"/>.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask.Name">
-            <summary>
-            Nombre de la tarea.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask.FriendlyName">
-            <summary>
-            Nombre a mostrar al usuario en la interfaz de configuración
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask.Description">
-            <summary>
-            Descripción de la tarea.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask.InstanceNameFormat">
-            <summary>
-            Nombre de instancia de la tarea a mostrar en la lista de tareas configuradas.
-            </summary>
-            <remarks>Puede contener TAGs de reemplazo de variables.</remarks>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask.JobType">
-            <summary>
-            El <see cref="T:System.Type"/> que implementa el código que se ejecuta en segundo plano.
-            </summary>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Batch.BatchEvaluationTask.GetConfigurationOptions(System.Nullable{System.Int32})">
-            <summary>
-            Devuelve las opciones que permiten configurar la tarea.
-            </summary>
-            <param name="tenantId">Identificación del suscriptor.</param>
-            <returns>
-                Las opciones para construir el formulario para configurar la tarea.
-            </returns>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.Batch.BatchExporterArgs">
             <summary>
@@ -373,7 +343,7 @@
             <see cref="T:Worldsys.Compliance.LdiModule.Batch.LdiBatchApplicationService"/> implementa los servicios de aplicación de funciones batch.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Batch.LdiBatchApplicationService.#ctor(Worldsys.Compliance.Authorization.Users.UserManager,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Abp.BackgroundJobs.IBackgroundJobManager,Worldsys.Compliance.Storage.ITempFileCacheManager,Worldsys.Compliance.Agent.TaskStatusService,Worldsys.Compliance.LdiModule.EvaluationRepository,Abp.Domain.Repositories.IRepository{Worldsys.Compliance.LdiModule.Batch.BatchControlConfig,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.LdiModule.Batch.BatchControlRecord,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Data.Export.ExportConfiguration,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.LdiModule.SearchConfiguration,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.LdiModule.HostSourceKind},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Workflows.WorkflowDefinition,System.String})">
+        <member name="M:Worldsys.Compliance.LdiModule.Batch.LdiBatchApplicationService.#ctor(Worldsys.Compliance.Authorization.Users.UserManager,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Abp.BackgroundJobs.IBackgroundJobManager,Worldsys.Compliance.Storage.ITempFileCacheManager,Worldsys.Compliance.Agent.TaskStatusService,Worldsys.Compliance.LdiModule.EvaluationRepository,Abp.Domain.Repositories.IRepository{Worldsys.Compliance.LdiModule.Batch.BatchControlConfig,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.LdiModule.Batch.BatchControlRecord,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Data.Export.ExportConfiguration,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.LdiModule.SearchConfiguration,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.LdiModule.HostSourceKind},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Workflows.WorkflowDefinition,System.String},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Empresa})">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.LdiModule.Batch.LdiBatchApplicationService"/>.
             </summary>
@@ -475,13 +445,13 @@
             <param name="matches">Colección de aciertos relacionados al certificado.</param>
             <param name="sources">Colección de fuentes.</param>
             <exception cref="T:System.ArgumentNullException">
-            	<para>Lanzada cuando <paramref name="input"/> es <see langword="null"/>.</para>
-            	<para>-o-</para>
-            	<para>Cuando <paramref name="evaluation"/> es <see langword="null"/>.</para>
-            	<para>-o-</para>
-            	<para>Cuando <paramref name="matches"/> es <see langword="null"/>.</para>
-            	<para>-o-</para>
-            	<para>Cuando <paramref name="sources"/> es <see langword="null"/>.</para>
+                   <para>Lanzada cuando <paramref name="input"/> es <see langword="null"/>.</para>
+                   <para>-o-</para>
+                   <para>Cuando <paramref name="evaluation"/> es <see langword="null"/>.</para>
+                   <para>-o-</para>
+                   <para>Cuando <paramref name="matches"/> es <see langword="null"/>.</para>
+                   <para>-o-</para>
+                   <para>Cuando <paramref name="sources"/> es <see langword="null"/>.</para>
             </exception>
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.Certificates.CertificateBuildModel.LogoPath">
@@ -499,14 +469,14 @@
             Evaluación sobre la cual generar el certificado.
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Certificates.CertificateBuildModel.EvaluationClobData">
-            <summary>
-            Información Clob de evaluaciones.
-            </summary>
-        </member>
         <member name="P:Worldsys.Compliance.LdiModule.Certificates.CertificateBuildModel.Matches">
             <summary>
             Resultados asociados a la evaluación sobre la cual generar el certificado.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Certificates.CertificateBuildModel.EvaluationClobData">
+            <summary>
+            Información Clob de evaluaciones.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.Certificates.CertificateBuildModel.Sources">
@@ -1617,6 +1587,16 @@
         <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.ElasticSearchService.ThrowIfElasticResponseIsNotSuccess(Elasticsearch.Net.StringResponse,System.String)">
             <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException"></exception>
         </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.GafiSearchService">
+            <summary>
+            Servicio de búsqueda de información GAFI.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.GafiSearchService.GetGafiInfoAsync">
+            <summary>
+            Recupera la información del servicio GAFI.
+            </summary>
+        </member>
         <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.InformacionFiscalSearchService.GetInformacionFiscalAsync(System.String)">
             <summary>
             Busca la información fiscal para la <paramref name="idTributaria"/> especificada.
@@ -1698,237 +1678,20 @@
                 <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
             </exception>
         </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackColombiaAJSearchService.GetPackColombiaAJAsync(System.String,System.String)">
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.Packs.EcuadorSearchService">
             <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
+            Servicio de búsqueda de información del pack de Ecuador.
             </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="tipo_identificacion"></param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
         </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackColombiaBDMESearchService.GetPackColombiaBDMEAsync(System.String)">
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.Packs.EcuadorSearchService.SearchAntecedentesPenalesAsync(Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchTerms,System.Threading.CancellationToken)">
             <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
+            Ejecuta la búsqueda de antecedentes penales en el servicio externo.
             </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
         </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackColombiaCCRSearchService.GetPackColombiaCCRAsync(System.String,System.String)">
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.Packs.EcuadorSearchService.SearchProcesosJudicialesAsync(Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesosJudicialesPackSearchTerms,System.Threading.CancellationToken)">
             <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
+            Ejecuta la búsqueda de procesos judiciales en el servicio externo.
             </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="fecha_expedicion"></param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackColombiaDEFSearchService.GetPackColombiaDEFAsync(System.String)">
-            <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackColombiaMuiscaSearchService.GetPackColombiaMuiscaAsync(System.String)">
-            <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackColombiaRFSearchService.GetPackColombiaRFAsync(System.String,System.String,System.String)">
-            <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="tipo_persona"></param>
-            <param name="tipo_identificacion"></param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackColombiaRUAFSearchService.GetPackColombiaRUAFAsync(System.String,System.String,System.String)">
-            <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="fecha_expedicion"></param>
-            <param name="tipo_identificacion"></param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackColombiaRUCOMSearchService.GetPackColombiaRUCOMAsync(System.String,System.String)">
-            <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="rol"></param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackColombiaRUESSearchService.GetPackColombiaRUESAsync(System.String,System.String)">
-            <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="denominacion"></param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackEcuadorANTPENSearchService.GetPackEcuadorANTPENAsync(System.String)">
-            <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackEcuadorGAFISearchService.GetPackEcuadorGAFIAsync">
-            <summary>
-            Busca la información.
-            </summary>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.PackEcuadorPROJUDSearchService.GetPackEcuadorPROJUDAsync(System.String)">
-            <summary>
-            Busca la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-                La información.
-            </returns>
-            <exception cref="T:System.ArgumentException">
-                <para>Lanzada cuando <paramref name="identificacion"/> es <see langword="null"/> o está vacio.</para>
-            </exception>
-            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
-                <para>Lanzada con StatusCode igual a 502 cuando no se puede leer la respuesta del servicio.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 500 para reportar errores no controlados.</para>
-                <para>-o-</para>
-                <para>Con StatusCode igual a 404 cuando el servicio responde no encontrado.</para>
-            </exception>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.SearchBulletinsOutputConverter">
             <summary>
@@ -1951,6 +1714,141 @@
             <summary>
             Lee el JSON y lo convierte en un <see cref="T:Worldsys.Compliance.LdiModule.Search.SearchBulletinsOutput"/>.
             </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService">
+            <summary>
+            Implementa el proceso de negocios de búsqueda en <b>Listas de Informados</b>.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService.#ctor(Castle.Core.Logging.ILogger,Abp.Localization.ILocalizationManager,Worldsys.Compliance.SettingsModels.ExternalServiceEndpoint,System.String,System.String)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService"/>.
+            </summary>
+            <param name="logger">Servicio de LOG.</param>
+            <param name="localizationManager">Servicio de localización.</param>
+            <param name="settings">Configuración del endpoint de <b>Elastic Searck</b>.</param>
+            <param name="indexName">Nombre del índice de <b>Elastic Search</b> de Worldsys.</param>
+            <param name="clientIndexName">Nombre del índice de <b>Elastic Search</b> del cliente.</param>
+            <exception cref="T:System.ArgumentNullException">
+            	<para>Lanzada cuando <paramref name="logger"/> es <see langword="null"/>.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="localizationManager"/> es <see langword="null"/>.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="settings"/> es <see langword="null"/>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="indexName"/> es <see langword="null"/> o está vacío.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="clientIndexName"/> es <see langword="null"/> o está vacío.</para>
+            </exception>
+        </member>
+        <member name="E:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService.PreparationDuration">
+            <summary>
+            Reporta duración del proceso de preparación.
+            </summary>
+        </member>
+        <member name="E:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService.GatewayDuration">
+            <summary>
+            Reporta duración en servicio externo.
+            </summary>
+        </member>
+        <member name="E:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService.ProcessDuration">
+            <summary>
+            Reporta duración del proceso.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService.FindOneAutoridadDelDocumentoAsync(System.String,System.String)">
+            <summary>
+            	Busca en el índice de autoridades el primer documento para el <paramref name="numeroDocumento"/>
+            	y <paramref name="tipoDocumento"/> especificados.
+            </summary>
+            <param name="numeroDocumento">Número de documento a buscar.</param>
+            <param name="tipoDocumento">Tipo de documento a buscar.</param>
+            <returns>
+            	El primer documnto de autoridad o <see langword="null"/> si no hay ninguno.
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="numeroDocumento"/> es <see langword="null"/> o está vacío.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="tipoDocumento"/> es <see langword="null"/> o </para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el sevicio de búsqueda externo.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService.GetAutoridadesDeSociedadAsync(System.String)">
+            <summary>
+            Recupera las autoridades de la sociedad especificada por el <paramref name="numeroCorrelativo"/>.
+            </summary>
+            <param name="numeroCorrelativo">Número correlativo correspondiente a la sociedad.</param>
+            <returns>
+            	Colección de autoridades de la sociedad.
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="numeroCorrelativo"/> es <see langword="null"/> o está vacío.</para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el servicio de búsqueda.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService.GetSociedadesRelacionadasAPersonaConDocumentoAsync(System.String,System.String)">
+            <summary>
+            Recupera las sociedades relacionadas a la persona con el <paramref name="numeroDocumento"/> especificado.
+            </summary>
+            <param name="numeroDocumento">Número de documento.</param>
+            <param name="tipoDocumento">Tipo de documento.</param>
+            <returns>
+            	Colección de sociedades relacionadas.
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="numeroDocumento"/> es <see langword="null"/> o está vacío.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="tipoDocumento"/> es <see langword="null"/> o </para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el servicio de búsqueda.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService.SearchAsync``2(Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms,``1)">
+            <summary>
+            Ejecuta el proceso de búsqueda en <b>Listas de Informados</b>.
+            </summary>
+            <param name="terms">Términos a buscar.</param>
+            <param name="converter">Convertidor de resultados.</param>
+            <returns>
+            	El resultado de búsqueda en <b>Listas de Informados</b>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            	<para>Lanzada cuando <paramref name="terms"/> es <see langword="null"/>.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="converter"/> es <see langword="null"/>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="terms"/> no tiene establecidos los datos a buscar.</para>
+            	<para>-o-</para>
+            	<para>Cuando los datos requeridos para la búsqueda no están establecidos en <paramref name="terms"/>.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchProcessService.SearchRelatedItemsAsync``2(Worldsys.Compliance.LdiModule.Search.SearchSourcesForRelatedItemsInput,``1)">
+            <summary>
+            Busca en <b>Listas de Informados</b> los ítems relacionados al resultado por documento e id. tributaria.
+            </summary>
+            <param name="terms">Términos a buscar.</param>
+            <param name="resultConverter">Convertidor de resultados.</param>
+            <returns>
+            	Resultado de búsqueda en <b>Listas de Informados</b>.
+            </returns>
+            <returns>
+            	El resultado de búsqueda en <b>Listas de Informados</b>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            	<para>Lanzada cuando <paramref name="terms"/> es <see langword="null"/>.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="resultConverter"/> es <see langword="null"/>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando la información en <paramref name="terms"/> no es válida para realizar la búsqueda.</para>
+            </exception>
         </member>
         <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchResultConverter`1.#ctor(Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms)">
             <summary>
@@ -1985,6 +1883,186 @@
             <summary>
             Convierte <paramref name="value"/> en un <see cref="T:System.DateTime"/>.
             </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService">
+            <summary>
+            <see cref="T:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService"/> provee servicios de búsqueda a través de <b>Elastic Search</b>.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.#ctor(Castle.Core.Logging.ILogger,Abp.Localization.ILocalizationManager,Worldsys.Compliance.SettingsModels.ExternalServiceEndpoint)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService"/>.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            	<para>Lanzada cuando cualquiera de los argumentos es <see langword="null"/>.</para>
+            </exception>
+        </member>
+        <member name="E:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.PreparationDuration">
+            <summary>
+            Reporta duración del proceso de preparación.
+            </summary>
+        </member>
+        <member name="E:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.GatewayDuration">
+            <summary>
+            Reporta duración en servicio externo.
+            </summary>
+        </member>
+        <member name="E:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.ProcessDuration">
+            <summary>
+            Reporta duración del proceso.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.FindOneAutoridadDelDocumentoAsync(System.String,System.String)">
+            <summary>
+            	Busca en el índice de autoridades el primer documento para el <paramref name="numeroDocumento"/>
+            	y <paramref name="tipoDocumento"/> especificados.
+            </summary>
+            <param name="numeroDocumento">Número de documento a buscar.</param>
+            <param name="tipoDocumento">Tipo de documento a buscar.</param>
+            <returns>
+            	El primer documnto de autoridad o <see langword="null"/> si no hay ninguno.
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="numeroDocumento"/> es <see langword="null"/> o está vacío.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="tipoDocumento"/> es <see langword="null"/> o </para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el sevicio de búsqueda externo.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.GetAutoridadesDelDocumentoAgrupandoNumeroCorrelativoAsync(System.String,System.String)">
+            <summary>
+            	Recupera del índice de autoridades los items correspondientes al documento especificado, agrupando
+            	los por el número correlativo del item recuperado.
+            </summary>
+            <param name="numeroDocumento">Número de documento a buscar.</param>
+            <param name="tipoDocumento">Tipo de documento a buscar.</param>
+            <returns>
+            	Collección de documentos de autoridades del documento especificado.
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="numeroDocumento"/> es <see langword="null"/> o está vacío.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="tipoDocumento"/> es <see langword="null"/> o </para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el sevicio de búsqueda externo.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.GetAutoridadesPorNumeroCorrelativoAsync(System.String)">
+            <summary>
+            Recupera del índice de autoridades las autoridades correspondientes al <paramref name="numeroCorrelativo"/> especificado.
+            </summary>
+            <param name="numeroCorrelativo">Número correlativo a buscar (el código de la sociedad).</param>
+            <returns>
+            	Colección de autoridades correspondientes al número correlativo
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="numeroCorrelativo"/> es <see langword="null"/> o está vacío.</para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el sevicio de búsqueda externo.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.GetFechaNovedadAsync(System.String)">
+            <summary>
+            Recupera la fecha de novedad.
+            </summary>
+            <param name="indexName">Indice del cual recuperar la fecha de novedad.</param>
+            <returns>
+            	Fecha de novedad.
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="indexName"/> es <see langword="null"/> o está vacío.</para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el servicio de búsqueda externo.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.GetSociedadesPorNumeroCorrelativoAsync(System.String[])">
+            <summary>
+            Recupera de la fuente IGJ_SOCIEDADES las sociedades correspondientes a los números correlativos especificados.
+            </summary>
+            <param name="numerosCorrelativos">Números correlativos a buscar.</param>
+            <returns>
+            	Colección de sociedades para los números correlativos especificados.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            	<para>Lanzada cuando <paramref name="numerosCorrelativos"/> es <see langword="null"/>.</para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el sevicio de búsqueda externo.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.SearchAsync``1(System.String,Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms,Newtonsoft.Json.JsonConverter{``0})">
+            <summary>
+            Ejecuta la búsqueda del los datos en <paramref name="terms"/> en <b>Elastic Search</b>.
+            </summary>
+            <param name="indexName">Nombre del índice del <b>Elastic Search</b>.</param>
+            <param name="terms">Información a buscar.</param>
+            <param name="converter">Convertidor de resultados.</param>
+            <returns>
+            	Resultado de búsqueda.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            	<para>Lanzada cuando <paramref name="terms"/> es <see langword="null"/>.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="converter"/> es <see langword="null"/>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="indexName"/> es <see langword="null"/> o está vacío.</para>
+            	<para>-o-</para>
+            	<para>Cuando a <paramref name="terms"/> la falta información para realizar la búsqueda.</para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el servicio de búsqueda externo.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService.SearchRelatedItemsAsync``1(System.String,Worldsys.Compliance.LdiModule.Search.SearchSourcesForRelatedItemsInput,Newtonsoft.Json.JsonConverter{``0})">
+            <summary>
+            Busca en <b>Listas de Informados</b> los ítems relacionados al resultado por documento e id. tributaria.
+            </summary>
+            <param name="indexName">Indice del cual recuperar la fecha de novedad.</param>
+            <param name="terms">Términos a buscar.</param>
+            <param name="converter">Convertidor de resultados.</param>
+            <returns>
+            	Resultado de búsqueda en <b>Listas de Informados</b>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            	<para>Lanzada cuando <paramref name="terms"/> es <see langword="null"/>.</para>
+            	<para>-o-</para>
+            	<para>Cuando <paramref name="converter"/> es <see langword="null"/>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>Lanzada cuando <paramref name="indexName"/> es <see langword="null"/> o está vacío.</para>
+            	<para>-o-</para>
+            	<para>Cuando a <paramref name="terms"/> la falta información para realizar la búsqueda.</para>
+            </exception>
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException">
+            	<para>Lanzada para reportar errores producidos en el servicio de búsqueda externo.</para>
+            </exception>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService2">
+            <summary>
+            Servicio de búsqueda a traves de <b>Elastic Search</b> con proceso de evaluación.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService2.GetFechaNovedadAsync(System.String)">
+            <summary>
+            Recupera la fecha de novedad.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService2.Search``2(Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms,``1)">
+            <summary>
+            Ejecuta el proceso de búsqueda en <b>Listas de Informados</b>.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService2.SearchElastic(Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms,System.String)">
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException"></exception>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchService2.ThrowIfElasticResponseIsNotSuccess(Elasticsearch.Net.StringResponse,System.String)">
+            <exception cref="T:Worldsys.Compliance.Errors.StatusCodeException"></exception>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService">
             <summary>
@@ -2048,6 +2126,11 @@
             	Colección de sociedades.
             </returns>
         </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetGafiInfo">
+            <summary>
+            Recupera la información del servicio GAFI.
+            </summary>
+        </member>
         <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetInformacionFiscal(System.String)">
             <summary>
             Recupera la información fiscal para la <paramref name="idTributaria"/> especificada.
@@ -2055,121 +2138,6 @@
             <param name="idTributaria">Identificación tributaria.</param>
             <returns>
             	La información fiscal para la identificación tributaria.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackColombiaMuisca(System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackColombiaRF(System.String,System.String,System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="tipo_persona"></param>
-            <param name="tipo_identificacion"></param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackColombiaRUES(System.String,System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="denominacion"></param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackColombiaAJ(System.String,System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="tipo_identificacion"></param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackColombiaCCR(System.String,System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="fecha_expedicion"></param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackColombiaBDME(System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackColombiaRUAF(System.String,System.String,System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="fecha_expedicion"></param>
-            <param name="tipo_identificacion"></param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackColombiaRUCOM(System.String,System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <param name="rol"></param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackColombiaDEF(System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackEcuadorPROJUD(System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackEcuadorANTPEN(System.String)">
-            <summary>
-            Recupera la información para la <paramref name="identificacion"/> especificada.
-            </summary>
-            <param name="identificacion">Identificación.</param>
-            <returns>
-            	La información para la identificación.
-            </returns>
-        </member>
-        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackEcuadorGAFI">
-            <summary>
-            Recupera la información.
-            </summary>
-            <returns>
-            	La información de GAFI.
             </returns>
         </member>
         <member name="M:Worldsys.Compliance.LdiModule.Search.LdiEvaluationApplicationService.GetPackArgentinaSO(System.String)">
@@ -2303,6 +2271,21 @@
             Actualiza el resultado de evaluación de una evaluación previamente registrada.
             </summary>
             <param name="input">Evalaución del usuario</param>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Search.LdiPackEcuadorApplicationService">
+            <summary>
+            Implementa los servicios de aplicación del pack de Ecuador.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiPackEcuadorApplicationService.SearchAntecedentesPenales(Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchTerms)">
+            <summary>
+            Busca antecedentes penales en este pack.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Search.LdiPackEcuadorApplicationService.SearchProcesosJudiciales(Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesosJudicialesPackSearchTerms)">
+            <summary>
+            Busca procesos judiciales en este pack.
+            </summary>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.ServiceUsageRepository">
             <summary>

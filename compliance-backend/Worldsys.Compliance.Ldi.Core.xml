@@ -59,6 +59,11 @@
             Serialización de la configuración de generación de alerta.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SerializedFilterEmpresas">
+            <summary>
+            Serialización de filtro por empresas.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfig.SearchConfiguration">
             <summary>
             Configuración de búsqueda.

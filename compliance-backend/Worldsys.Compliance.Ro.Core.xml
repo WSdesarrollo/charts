@@ -10,7 +10,7 @@
             </summary>
             <summary>
             Representa la ejecución de un control.
-            Version: 4
+            Version: 5
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.TenantId">
@@ -93,12 +93,22 @@
             Id de instancia de workflow.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.OutPlanDeAccionId">
+            <summary>
+            Id del plan de acción generado durante la ejecución del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.InPlanDeAccionId">
+            <summary>
+            Id del plan de acción que generó la ejecución del control.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.Control">
             <summary>
             Control asociado a esta ejecución.
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.CreatedBy">
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.CreatedByUser">
             <summary>
             Usuario que creó la ejecución del control.
             </summary>
@@ -128,6 +138,11 @@
             Dictamen de ejecución realizado por el usuario.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.SystemLogs">
+            <summary>
+            Registro de acciones realizadas sobre la ejecución de control.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionSystemLog">
             <summary>
             Registro de acciones realizadas sobre la ejecución de un control.
@@ -152,14 +167,177 @@
             Información registrada.
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionSystemLog.ControlEjecucion">
-            <summary>
-            Ejecución de control.
-            </summary>
-        </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionSystemLog.CreatorUser">
             <summary>
-            Usuario que creo el registro.
+            Usuario que creó el registro.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion">
+            <summary>
+            Representa un plan de acción realizado para mitigar un problema.
+            </summary>
+            <summary>
+            Representa un plan de acción realizado para mitigar un problema.
+            Version: 1
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.TenantId">
+            <summary>
+            Id de suscriptor.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.TargetType">
+            <summary>
+            Tipo de entidad asociada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.InputEntityId">
+            <summary>
+            Id de la entidad que dio origen al plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.OutputEntityId">
+            <summary>
+            Id de la entidad generada a la finalización de plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.Title">
+            <summary>
+            Título del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.Details">
+            <summary>
+            Detalle del plan de acción (documentación).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ResponsibleOUId">
+            <summary>
+            Id de la unidad organizativa responsable de la ejecuión del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ResponsibleUserId">
+            <summary>
+            Id del usuario responsable de la ejecución del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.EstimatedCompletionDate">
+            <summary>
+            Fecha prevista de finalización del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.CurrentStep">
+            <summary>
+            Número de paso en ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ExecutionWorkflowInstanceId">
+            <summary>
+            Id de instancia de workflow correspondiente al paso de ejecución del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ExecutionCommentId">
+            <summary>
+            Id de registro que almacena el comentario de ejecución.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ExecutionUserId">
+            <summary>
+            Id del usuario que ejecutó el plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ExecutionTime">
+            <summary>
+            Fecha y hora de ejecución del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.VerficationWorkflowInstanceId">
+            <summary>
+            Id de instancia de workflow correspondiente al paso de verificación del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.VerificationOpinionId">
+            <summary>
+            Id del registro que almacena el dictamen de verificación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.VerificationUserId">
+            <summary>
+            Id del usuario que verificó la efectividad del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.VerificationTime">
+            <summary>
+            Fecha y hora de verificación de la efectividad del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.Efectividad">
+            <summary>
+            Efectividad del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ResponsibleOU">
+            <summary>
+            Unidad responsable
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ResponsibleUser">
+            <summary>
+            Usuario responsable
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ExecutionComment">
+            <summary>
+            Comentario de ejecucion del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.ExecutionUser">
+            <summary>
+            Usuario que ejecutó el plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.VerificationOpinion">
+            <summary>
+            Dictamen de verificación del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.VerificationUser">
+            <summary>
+            Usuario que verificó la efectividad del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccion.SystemLogs">
+            <summary>
+            Registro de acciones realizadas sobre el plan de acción.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccionSystemLog">
+            <summary>
+            Registro de acciones realizadas sobre un plan de acción.
+            </summary>
+            <summary>
+            Registro de acciones realizadas sobre un plan de acción.
+            Version: 1
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccionSystemLog.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccionSystemLog.PlanDeAccionId">
+            <summary>
+            Id del plan de acción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccionSystemLog.LogData">
+            <summary>
+            Información registrada.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoPlanDeAccionSystemLog.CreatorUser">
+            <summary>
+            Usuario que creó el registro.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation">
@@ -168,7 +346,7 @@
             </summary>
             <summary>
             Representa una evaluación de riesgos.
-            Version: 3
+            Version: 4
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.TenantId">
@@ -296,12 +474,22 @@
             Id de instancia de workflow.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.OutPlanDeAccionId">
+            <summary>
+            Id del plan de acción generado por la evaluación de riesgos.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.InPlanDeAccionId">
+            <summary>
+            Id de plan de acción que generó esta evaluacón de riesgos.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.RiskNode">
             <summary>
             Nodo evaluado del mapa de riesgos
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.CreatedBy">
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.CreatedByUser">
             <summary>
             Usuario que creó la evaluación de riesgo.
             </summary>
@@ -346,6 +534,11 @@
             Detalle de riesgo por no segregación de funciones.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.SystemLogs">
+            <summary>
+            Registro de acciones realizadas sobre la evaluación de riesgos.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog">
             <summary>
             Registro de acciones realizadas sobre la evaluación de riesgos.
@@ -368,11 +561,6 @@
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog.LogData">
             <summary>
             Información registrada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog.Evaluation">
-            <summary>
-            Evaluación de riesgo.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLog.CreatorUser">

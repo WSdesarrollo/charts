@@ -52,7 +52,7 @@
             Implementa los servicios de edición de controles.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.#ctor(Abp.EntityFrameworkCore.IDbContextProvider{Worldsys.Compliance.EntityFrameworkCore.ComplianceDbContext},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Workflows.WorkflowDefinition,System.String},Abp.Domain.Repositories.IRepository{Abp.Organizations.OrganizationUnit,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Descriptive,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Universal.RoClobData,System.String},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoControl,System.String},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRelationControlRisk,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Operational.RoControlEjecucion,System.String})">
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.#ctor(Worldsys.Compliance.RoModule.RoProcessService,Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoControl,System.String})">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.RoModule.RoControlesApplicationService"/>.
             </summary>
@@ -72,6 +72,11 @@
             Elimina un control (soft delete).
             </summary>
         </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetControlEjecucion(System.String)">
+            <summary>
+            Recupera una ejecución de control.
+            </summary>
+        </member>
         <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetControlesForList(Worldsys.Compliance.Dto.NamePagedSortedAndFilteredWithShowDeletedItemsInputDto)">
             <summary>
             Recupera la información para la lista de edición de controles.
@@ -82,9 +87,19 @@
             Recupera la información para el diálogo de edición de control.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetControlEjecucion(System.String)">
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetEjecucionHistoryForControl(System.String)">
             <summary>
-            Recupera una ejecución de control.
+            Recupera el historial
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetEjecucionHistoryFromEjecucion(System.String)">
+            <summary>
+            Recupera el hisorial de ejecución a partir de la ejecución especificada.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetRiesgosAsociadosAlControl(System.String)">
+            <summary>
+            Recupera los riesgos asociados al control con el <paramref name="controlId"/> especificado.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.RecoverControl(Abp.Application.Services.Dto.EntityDto{System.String})">
@@ -107,12 +122,119 @@
             Sets the feature.
             </summary>
         </member>
+        <member name="T:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService">
+            <summary>
+            Implementa los servicios de aplicación relacionados a planes de acción.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService.#ctor(Worldsys.Compliance.RoModule.RoProcessService)">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService"/>.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService.GetPlanDeAccion(System.String)">
+            <summary>
+            Recupera un plan de acción.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService.GetPlanDeAccionForView(System.String)">
+            <summary>
+            Recupera un plan de acción para visualización.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService.RegisterExecutionOfStep1(Worldsys.Compliance.RoModule.Operational.RoPlanDeAccionStep1EditInput)">
+            <summary>
+            Registra la ejecución del plan de acción.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService.RegisterExecutionOfStep2(Worldsys.Compliance.RoModule.Operational.RoPlanDeAccionStep2EditInput)">
+            <summary>
+            Registra la verifcación de efectividad del plan de acción.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.RoProcessService">
+            <summary>
+            Implementa los servicios que controlan el proceso evaluaciones, controles
+            y plane de acción de Riesgo Operativo.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.#ctor">
+            <summary>
+            Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.RoModule.RoProcessService"/>.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.CreateControlEjecucionOrGetTheCurrentOneAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput)">
+            <summary>
+            Crea una nueva ejecución de control o devuelve la ejecución actualmente en progreso.
+            </summary>
+            <param name="tenantId">Id del suscriptor.</param>
+            <param name="userId">Id del usuario.</param>
+            <param name="input">Información para crear la ejecución del control.</param>
+            <returns>
+                El id de la ejecución de control.
+            </returns>
+            <exception cref="T:Abp.UI.UserFriendlyException">
+                Lanzada para reportar errores de validación.
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.RegisterControlEjecucionAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoControlEjecucionEditInput)">
+            <summary>
+            Registra la ejecución del control.
+            </summary>
+            <param name="tenantId">Id del suscriptor.</param>
+            <param name="userId">Id del usuario.</param>
+            <param name="input">Información para procesar el registro de la ejecución del control.</param>
+            <exception cref="T:Abp.UI.UserFriendlyException">
+                Lanzada para reportar errores de validación.
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.ProcessPlanDeAccionStepAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoPlanDeAccionStep1EditInput)">
+            <summary>
+            Procesa el paso 1 de la ejecución del plan de acción.
+            </summary>
+            <param name="tenantId">Id del suscriptor.</param>
+            <param name="userId">Id del usuario.</param>
+            <param name="input">Información para crear la evaluación de riesgo.</param>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.ProcessPlanDeAccionStepAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoPlanDeAccionStep2EditInput)">
+            <summary>
+            Procesa el paso 2 de la ejecución del plan de acción.
+            </summary>
+            <param name="tenantId">Id del suscriptor.</param>
+            <param name="userId">Id del usuario.</param>
+            <param name="input">Información para crear la evaluación de riesgo.</param>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.CreateRiskEvaluationOrGetTheCurrentOneAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput)">
+            <summary>
+            Crea una nueva evaluación de riesgos o devuelve la evaluación actual en progreso.
+            </summary>
+            <param name="tenantId">Id del suscriptor.</param>
+            <param name="userId">Id del usuario.</param>
+            <param name="input">Información para crear la evaluación de riesgo.</param>
+            <returns>
+                El id de la evaluación de riesgo.
+            </returns>
+            <exception cref="T:Abp.UI.UserFriendlyException">
+                Lanzada para reportar errores de validación.
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.RegisterRiskEvaluationAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationEditInput)">
+            <summary>
+            Registra la evaluaión del riesgo.
+            </summary>
+            <param name="tenantId">Id del suscriptor.</param>
+            <param name="userId">Id del usuario.</param>
+            <param name="input">Información para procesar el registro de la ejecución del control.</param>
+            <exception cref="T:Abp.UI.UserFriendlyException">
+                Lanzada para reportar errores de validación.
+            </exception>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService">
             <summary>
             Servicios de edición del mapa de riesgos.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.#ctor(Abp.EntityFrameworkCore.IDbContextProvider{Worldsys.Compliance.EntityFrameworkCore.ComplianceDbContext},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Workflows.WorkflowDefinition,System.String},Abp.Domain.Repositories.IRepository{Abp.Organizations.OrganizationUnit,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.Commons.Descriptive,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRiskMap,System.String},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation,System.String},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification,System.Int64})">
+        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.#ctor(Worldsys.Compliance.RoModule.RoProcessService,Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRiskMap,System.String},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification,System.Int64})">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService"/>.
             </summary>
@@ -135,6 +257,11 @@
         <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.GetBranch(System.String)">
             <summary>
             Recupera la rama solicitada del mapa de riesgo.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.GetControlesAsociadosAlRiesgo(System.String)">
+            <summary>
+            Recupera los controles asociados al riesgo con el <paramref name="riskId"/> especificado.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.GetRiskMapNode(Abp.Application.Services.Dto.EntityDto{System.String})">
@@ -235,6 +362,31 @@
         <member name="M:Worldsys.Compliance.RoModule.RoSettingProvider.GetSettingDefinitions(Abp.Configuration.SettingDefinitionProviderContext)">
             <summary>
             Devuelve la definición de los settings de Riesgo Operativo.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.RoTasksApplicationService">
+            <summary>
+            Implementa los servicios relacionados a la lista de tareas pendientes.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoTasksApplicationService.GetPendingControlesEjecucion(Worldsys.Compliance.RoModule.Operational.RoPendingTasksListInput)">
+            <summary>
+            Recupera la lsta de ejecuciones de control pendientes.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoTasksApplicationService.GetPendingPlanesDeAccion(Worldsys.Compliance.RoModule.Operational.RoPendingTasksListInput)">
+            <summary>
+            Recupera la lista de planes de acción pendientes.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoTasksApplicationService.GetPendingRiskMapEvaluations(Worldsys.Compliance.RoModule.Operational.RoPendingTasksListInput)">
+            <summary>
+            Recupera la lista de evaluaciones de riesgo pendientes.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoTasksApplicationService.GetPendingTasksListData">
+            <summary>
+            Recupera la información para la página de tareas pendientes.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.RoModule.Settings.RoSettingsApplicationService">

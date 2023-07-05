@@ -258,6 +258,21 @@
             	Un <see cref="T:Worldsys.Compliance.LdiModule.Api.SourcesSearchResponse"/> encapsulado en un <see cref="T:Microsoft.AspNetCore.Mvc.ObjectResult"/>.
             </returns>
         </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Api.Packs.ILdiApiEcuadorApplicationService">
+            <summary>
+            Define la API de servicios del pack de Ecuador.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Api.Packs.ILdiApiEcuadorApplicationService.AntecedentesPenalesAsync(System.String)">
+            <summary>
+            Recupera la información de antecedentes penales.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Api.Packs.ILdiApiEcuadorApplicationService.ProcesosJudicialesAsync(System.String)">
+            <summary>
+            Recupera la información de procesos judiciales.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.LdiModule.Api.SourcesSearchRequest">
             <summary>
             <see cref="T:Worldsys.Compliance.LdiModule.Api.SourcesSearchRequest"/> modela la solicitud de búsqueda en LDI.
@@ -399,6 +414,11 @@
             Configuración de búsqueda.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfigDto.FilterEmpresas">
+            <summary>
+            Serialización de filtro por empresas.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.LdiModule.Batch.BatchControlConfigEditDto">
             <summary>
             Output Dto para inicializar el diálogo de edición de controles de cartera.
@@ -477,6 +497,11 @@
         <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfigEditInput.SourceKindAlertConfiguration">
             <summary>
             Configuración de alertas por tipo de fuente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Batch.BatchControlConfigEditInput.FilterEmpresas">
+            <summary>
+            Filtro por Ids de Empresas
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.LdiModule.Batch.BatchControlConfigEditInput.Normalize">
@@ -1623,6 +1648,41 @@
             Feature para acceder a servicios Api publicados para su uso por clientes externos.
             </summary>
         </member>
+        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.Packs">
+            <summary>
+            Grupo de paquetes de información.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PacksArgentina">
+            <summary>
+            Paquete de información de Argentina.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PacksArgentinaSO">
+            <summary>
+            Información de sujeto obligado.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PacksArgentinaDC">
+            <summary>
+            Información de documentos cuestionados.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PacksEcuador">
+            <summary>
+            Paquete de información de Ecuador.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PacksEcuadorAntecedentesPenales">
+            <summary>
+            Antecedentes penales.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PacksEcuadorProcesosJudiciales">
+            <summary>
+            Procesos judiciales.
+            </summary>
+        </member>
         <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PremiumFeature">
             <summary>
             Premium feature root;
@@ -1633,84 +1693,9 @@
             Identificación de la característica <b>Boletnes</b>.
             </summary>
         </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.Informes">
-            <summary>
-            Identficación de la características <b>Informes</b>.
-            </summary>
-        </member>
         <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.Noticias">
             <summary>
             Identificación de la característca <b>Noticias</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackColombia">
-            <summary>
-            Identificación de la característica <b>PackColombia</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackColombiaRF">
-            <summary>
-            Identificación de la característica <b>PackColombiaRF</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackColombiaRUES">
-            <summary>
-            Identificación de la característica <b>PackColombiaRUES</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackColombiaAJ">
-            <summary>
-            Identificación de la característica <b>PackColombiaAJ</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackColombiaCCR">
-            <summary>
-            Identificación de la característica <b>PackColombiaCCR</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackColombiaBDME">
-            <summary>
-            Identificación de la característica <b>PackColombiaBDME</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackColombiaRUAF">
-            <summary>
-            Identificación de la característica <b>PackColombiaRUAF</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackColombiaRUCOM">
-            <summary>
-            Identificación de la característica <b>PackColombiaRUCOM</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackColombiaDEF">
-            <summary>
-            Identificación de la característica <b>PackColombiaDEF</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackEcuadorPROJUD">
-            <summary>
-            Identificación de la característica <b>PackEcuadorPROJUD</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackEcuadorANTPEN">
-            <summary>
-            Identificación de la característica <b>PackEcuadorANTPEN</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackEcuadorGAFI">
-            <summary>
-            Identificación de la característica <b>PackEcuadorGAFI</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackArgentinaSO">
-            <summary>
-            Identificación de la característica <b>PackArgentinaSO</b>.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.PackArgentinaDC">
-            <summary>
-            Identificación de la característica <b>PackArgentinaDC</b>.
             </summary>
         </member>
         <member name="F:Worldsys.Compliance.LdiModule.Consts.Features.Limits">
@@ -3109,84 +3094,9 @@
             <see langword="true"/> si la característica premium <b>Boletines</b> está habilitada.
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.Informes">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Informes</b> está habilitada.
-            </summary>
-        </member>
         <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.Noticias">
             <summary>
             <see langword="true"/> si la característica premium <b>Noticias</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackColombia">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Colombia</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackColombiaRF">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Colombia RF</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackColombiaRUES">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Colombia RUES</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackColombiaAJ">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Colombia Antecentes Judiciales</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackColombiaCCR">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Colombia Certif. Cédula - Registraduría</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackColombiaBDME">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Colombia Consulta Morosos</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackColombiaRUAF">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Colombia Consulta RUAF</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackColombiaRUCOM">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Colombia Consulta RUCOM</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackColombiaDEF">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Colombia Consulta Defunciones</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackEcuadorPROJUD">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Ecuador Procesos Judiciales</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackEcuadorANTPEN">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Ecuador Antecedentes Penales</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackEcuadorGAFI">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Ecuador GAFI</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackArgentinaSO">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Argentina Sujeto Obligado</b> está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.LdiPremiumFeatures.PackArgentinaDC">
-            <summary>
-            <see langword="true"/> si la característica premium <b>Pack Argentina Documentos Cuestionados</b> está habilitada.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.LdiServiceKind">
@@ -3374,14 +3284,14 @@
             Contraseña para conectarse a <b>Elastic Search</b>.
             </summary>
         </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.ElasticSearch.KeepAliveTcpConnection">
-            <summary>
-            Indica si el cliente debe mantener la conexión TCL viva.
-            </summary>
-        </member>
         <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.ElasticSearch.IndexName">
             <summary>
             Nombre del índice en <b>Elastic Search</b>.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.ElasticSearch.KeepAliveTcpConnection">
+            <summary>
+            Indica si el cliente debe mantener la conexión TCL viva.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.InformacionFiscalSearch">
@@ -3394,144 +3304,14 @@
             Dirección Url del sevicio de búsqueda de información fiscal.
             </summary>
         </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaMuiscaSearch">
+        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.InformacionGafi">
             <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Colombia - Muisca.
+            Settings names para conectarse al servicio de información GAFI.
             </summary>
         </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaMuiscaSearch.Endpoint">
+        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.InformacionGafi.Endpoint">
             <summary>
-            Dirección Url del sevicio de búsqueda de Pack Colombia - Muisca.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaRFSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Colombia - Responsable Fiscal.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaRFSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Colombia - Responsable Fiscal.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaRUESSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Colombia - Consulta RUES.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaRUESSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Colombia - Consulta RUES.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaAJSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Colombia - Antecedentes Judiciales.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaAJSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Colombia - Responsable Fiscal.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaCCRSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Colombia - Certif. Cédula - Registraduría.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaCCRSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Colombia - Certif. Cédula - Registraduría.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaBDMESearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Colombia - Consulta Morosos.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaBDMESearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Colombia - Consulta Morosos.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaRUAFSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Colombia - Consulta RUAF.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaRUAFSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Colombia - Certif. Cédula - Registraduría.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaRUCOMSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Colombia - Consulta RUCOM.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaRUCOMSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Colombia - Certif. Cédula - Registraduría.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaDEFSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Colombia - Consulta Defunciones.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackColombiaDEFSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Colombia - Consulta Defunciones.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackEcuadorPROJUDSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Ecuador - Procesos Judiciales.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackEcuadorPROJUDSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Ecuador - Procesos Judiciales.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackEcuadorANTPENSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Ecuador - Antecedentes Penales.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackEcuadorANTPENSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Ecuador - Antecedentes Penales.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackEcuadorGAFISearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Ecuador - GAFI.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackEcuadorGAFISearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Ecuador - GAFI.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackArgentinaSOSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Argentina - Sujeto Obligado.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackArgentinaSOSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Argentina - Sujeto Obligado.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackArgentinaDCSearch">
-            <summary>
-            Settings names para conectarse al servicio de búsqueda de Pack Argentina - Documentos Cuestionados.
-            </summary>
-        </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PackArgentinaDCSearch.Endpoint">
-            <summary>
-            Dirección Url del sevicio de búsqueda de Pack Argentina - Documentos Cuestionados.
+            Dirección Url del servicio de búsqueda de información GAFI.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.MoreInfoSearch">
@@ -3552,6 +3332,36 @@
         <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.MoreInfoSearch.Password">
             <summary>
             Contraseña para conectarse al servicio de búsqueda en <b>más información</b>.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PacksArgentina">
+            <summary>
+            Serrings para conectarse a los servicios de información de Argentina.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PacksArgentina.DocumentosCuestionadosEndpoint">
+            <summary>
+            Dirección Url del servicio de documentos cuestionados.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PacksArgentina.SujetoObligadoEndpoint">
+            <summary>
+            Dirección Url del servicio de información de sujeto obligado.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.PacksEcuador">
+            <summary>
+            Serrings para conectarse a los servicios de información de Ecuador.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PacksEcuador.BaseUri">
+            <summary>
+            Dirección Url base del servicio de información de Ecuador.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.PacksEcuador.ApiKey">
+            <summary>
+            Key a enviar a la API para autenticación.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.TenancySettings">
@@ -3684,7 +3494,7 @@
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.BulletinsQuery.Name">
             <summary>
-            Nombre a buscar.
+            Nombre a buscar (requerido).
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.BulletinsQuery.Document">
@@ -3735,6 +3545,31 @@
         <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.BulletinsSearchTerms.Start">
             <summary>
             Posición del primer documento a devolver (opcional).
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.GafiSearchResult">
+            <summary>
+            Resultado de búsqueda de información GAFI.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.GafiSearchResult.Pais">
+            <summary>
+            País.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.GafiSearchResult.Tipo">
+            <summary>
+            Tipo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.GafiSearchResult.Url">
+            <summary>
+            Url.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.GafiSearchResult.Iso2">
+            <summary>
+            Código ISO2 del país para relacionar con el acierto.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.Hit">
@@ -3967,6 +3802,96 @@
             Permite implementar un Json Converter para convertir el resultado de búsqueda en <b>Listas de Informados</b>.
             </summary>
         </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchResult">
+            <summary>
+            Resultado de búsqueda de antecedentes penales en el pack de Ecuador.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchResult.Identificacion">
+            <summary>
+            Número de identificación
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchResult.Tipo_Identificacion">
+            <summary>
+            Tipo de identificación de la persona buscada
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchResult.Denominacion">
+            <summary>
+            Nombre de la persona buscada
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchResult.Resultado">
+            <summary>
+            Indica si tiene, o no, antecedentes penales
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchTerms">
+            <summary>
+            Solicitud de búsqueda de antecedentes penales en el pack de Ecuador.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchTerms.Identificacion">
+            <summary>
+            Idenificación buscada.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesoJudicialDto">
+            <summary>
+            Output Dto con información de un proceso judicial de Ecuador.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesoJudicialDto.Fecha_Ingreso">
+            <summary>
+            Fecha de ingreso.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesoJudicialDto.Expediente">
+            <summary>
+            Expediente.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesoJudicialDto.Infraccion">
+            <summary>
+            Infracción.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesosJudicialesPackSearchResult">
+            <summary>
+            Resultado de búsqueda de antecedentes penales en el pack de Ecuador.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesosJudicialesPackSearchResult.ProcesosJudiciales">
+            <summary>
+            Colección de procesos judiciales.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesosJudicialesPackSearchTerms">
+            <summary>
+            Solicitud de búsqueda de procesos judiciales en el pack de Ecuador.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesosJudicialesPackSearchTerms.Identificacion">
+            <summary>
+            Idenificación buscada.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.Packs.PackSearchReult">
+            <summary>
+            Clase base para modelos de resultados de búsqueda en packs.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.PackSearchReult.Success">
+            <summary>
+            <see langword="true"/> si la búsqueda se ejecutó exitosamene, de lo contrario <see langword="false"/>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.Packs.PackSearchReult.Message">
+            <summary>
+            Mensaje a mostrar al usuario.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms">
             <summary>
             Modela la solicitud de búsqueda en fuentes a través de <b>Elastic Search</b>.
@@ -3985,26 +3910,6 @@
         <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms.IdTributaria">
             <summary>
             Número de identificación tributaria a buscar.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms.PersonType">
-            <summary>
-            Colombia - Tipo de Persona buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms.IdentificationType">
-            <summary>
-            Colombia - Tipo de Identificación buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms.ExpeditionDate">
-            <summary>
-            Colombia - Fecha de Expedición buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms.Rol">
-            <summary>
-            Colombia - Rol buscado.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.SourcesSearchTerms.FactorSimilitud">
@@ -4158,6 +4063,11 @@
             	Colección de sociedades.
             </returns>
         </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Search.ILdiEvaluationApplicationService.GetGafiInfo">
+            <summary>
+            Recupera la información del servicio GAFI.
+            </summary>
+        </member>
         <member name="M:Worldsys.Compliance.LdiModule.Search.ILdiEvaluationApplicationService.GetInformacionFiscal(System.String)">
             <summary>
             Recupera la información fiscal para la <paramref name="idTributaria"/> especificada.
@@ -4253,6 +4163,21 @@
             Actualiza el resultado de evaluación de una evaluación previamente registrada.
             </summary>
             <param name="input">Evalaución del usuario</param>
+        </member>
+        <member name="T:Worldsys.Compliance.LdiModule.Search.ILdiPackEcuadrApplicaionService">
+            <summary>
+            Define los servicios de aplicación del pack de Ecuador.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Search.ILdiPackEcuadrApplicaionService.SearchAntecedentesPenales(Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorAntecedentesPenalesPackSearchTerms)">
+            <summary>
+            Busca antecedentes penales en este pack.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.LdiModule.Search.ILdiPackEcuadrApplicaionService.SearchProcesosJudiciales(Worldsys.Compliance.LdiModule.SearchEngines.Packs.Ecuador.EcuadorProcesosJudicialesPackSearchTerms)">
+            <summary>
+            Busca procesos judiciales en este pack.
+            </summary>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.Search.InformacionFiscalDto">
             <summary>
@@ -4599,49 +4524,24 @@
             Identificación de la evaluación.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.Opinion">
+            <summary>
+            Dictámen del usuario sobre la evaluación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.Evaluation">
+            <summary>
+            Evaluación del usuario.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SearchedName">
             <summary>
             Nombre buscado.
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SearchedDocument">
-            <summary>
-            Documento buscado.
-            </summary>
-        </member>
         <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SearchedIdTributaria">
             <summary>
             Identificación tributaria buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SearchedPersonType">
-            <summary>
-            Colombia - Tipo de Persona buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SearchedIdentificationType">
-            <summary>
-            Colombia - Tipo de Identificación buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SearchedExpeditionDate">
-            <summary>
-            Colombia - Fecha de Expedición buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SearchedRol">
-            <summary>
-            Colombia - Rol buscado.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SearchedTipoDocumento">
-            <summary>
-            Argentina - Tipos de documentos.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SearchedSexo">
-            <summary>
-            Argentina - Sexo.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.IncludesOwnSources">
@@ -4651,17 +4551,7 @@
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SystemResult">
             <summary>
-            Recultado calculado por el sistema.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.Evaluation">
-            <summary>
-            Evaluación del usuario.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.Opinion">
-            <summary>
-            Dictámen del usuario sobre la evaluación.
+            Resultado calculado por el sistema.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.SourcesSearchTerms">
@@ -4684,9 +4574,21 @@
             Aciertos de búsqueda en boletines oficiales.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.EcuadorAntecedentesPenalesSearchTerms">
+            <summary>Búsqueda de antecedentes penales.</summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.EcuadorAntecedentesPenalesSearchResult">
+            <summary>Resultado de búsqueda de antecedentes penales.</summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.EcuadorProcesosJudicialesSearchTerms">
+            <summary>Búsqueda de procesos judicales.</summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.EcuadorProcesosJudicialesSearchResult">
+            <summary>Resultado de búsqueda de procesos judiciales.</summary>
+        </member>
         <member name="M:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInput.Normalize">
             <summary>
-            Normaliza la información recibida
+            Normalización.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.Search.OnLineEvaluationInputBulletin">
@@ -4864,561 +4766,6 @@
             La información devuelta.
             </summary>
         </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaAJDto">
-            <summary>
-            Modelo de Pack Colombia - Antecedentes Judiciales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaAJDto.Tipo_Identificacion">
-            <summary>
-            Tipo de identificación
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaAJDto.Identificacion">
-            <summary>
-            Identificacion de persona
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaAJDto.Denominacion">
-            <summary>
-            Nombre de la persona buscada
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaAJDto.Resultado">
-            <summary>
-            Resultado de la búsqueda
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaAJDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaAJDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaAJOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Colombia - Antecedentes Judiciales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaAJOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaAJOutput.PackColombiaAJ">
-            <summary>
-            La información devuelta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaBDMEDto">
-            <summary>
-            Modelo de Pack Colombia - Antecedentes Judiciales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaBDMEDto.Identificacion">
-            <summary>
-            Número de identificación
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaBDMEDto.Resultado">
-            <summary>
-            Resultado de la búsqueda
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaBDMEDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaBDMEDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaBDMEOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Colombia - Antecedentes Judiciales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaBDMEOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaBDMEOutput.PackColombiaBDME">
-            <summary>
-            La información devuelta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaCCRDto">
-            <summary>
-            Modelo de Pack Colombia - Antecedentes Judiciales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaCCRDto.Identificacion">
-            <summary>
-            Número de identificación
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaCCRDto.Denominacion">
-            <summary>
-            Nombre asociado a la cédula de identidad
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaCCRDto.Resultado">
-            <summary>
-            Resultado de la búsqueda
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaCCRDto.Fecha_Expedicion">
-            <summary>
-            Fecha de expedición de la cédula de identidad
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaCCRDto.Lugar_Expedicion">
-            <summary>
-            Lugar de expedición de la cédula de identidad
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaCCRDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaCCRDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaCCROutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Colombia - Antecedentes Judiciales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaCCROutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaCCROutput.PackColombiaCCR">
-            <summary>
-            La información devuelta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaDEFDto">
-            <summary>
-            Modelo de Pack Colombia - Defunciones
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaDEFDto.Identificacion">
-            <summary>
-            Número de identificación
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaDEFDto.Resultado">
-            <summary>
-            Resultado de la búsqueda
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaDEFDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaDEFDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaDEFOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Colombia - Defunciones
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaDEFOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaDEFOutput.PackColombiaDEF">
-            <summary>
-            La información devuelta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaMuiscaDto">
-            <summary>
-            Modelo de Pack Colombia - Muisca.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaMuiscaDto.Identificacion">
-            <summary>
-            Identificacion de persona.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaMuiscaDto.Denominacion">
-            <summary>
-            Nombre de persona.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaMuiscaDto.Resultado">
-            <summary>
-            Resultado / Estado.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaMuiscaDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaMuiscaDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaMuiscaOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Colombia - Muisca.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaMuiscaOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaMuiscaOutput.PackColombiaMuisca">
-            <summary>
-            La información fiscal.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaRFDto">
-            <summary>
-            Modelo de Pack Colombia - Responsable Fiscal.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRFDto.Identificacion">
-            <summary>
-            Identificacion de persona
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRFDto.C_verificacion">
-            <summary>
-            Código de autenticidad del certificado
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRFDto.Resultado">
-            <summary>
-            Resultado / Estado.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRFDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRFDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaRFOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Colombia - Responsable Fiscal.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRFOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRFOutput.PackColombiaRF">
-            <summary>
-            La información fiscal.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaRUAFDto">
-            <summary>
-            Modelo de Pack Colombia - Consulta RUAF.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUAFDto.Afiliacion">
-            <summary>
-            Afiliación
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUAFDto.Resultado">
-            <summary>
-            Resultado
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUAFDto.Informacion_Adicional">
-            <summary>
-            Información Adicional
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaRUAFOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Colombia - Consulta RUAF.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUAFOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUAFOutput.PackColombiaRUAF">
-            <summary>
-            La información de respuesta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaRUCOMDto">
-            <summary>
-            Modelo de Pack Colombia - Consulta RUCOM.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUCOMDto.Nro_Codigo">
-            <summary>
-            Número de código según corresponda (RUCOM, Expediente o Subcontrato)
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUCOMDto.Denominacion">
-            <summary>
-            Nombre asociado a la identificación
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUCOMDto.Minerales">
-            <summary>
-            Minerales
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUCOMDto.Estado">
-            <summary>
-            Estado del registro, si corresponde
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUCOMDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaRUCOMOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Colombia - Consulta RUCOM.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUCOMOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUCOMOutput.PackColombiaRUCOM">
-            <summary>
-            La información de respuesta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESDto">
-            <summary>
-            Modelo de Pack Colombia - Consulta RUES.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESResultadosDto">
-            <summary>
-            Modelo de Pack Colombia - Consulta RUES.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESResultadosDto.Identificacion">
-            <summary>
-            Identificacion de persona
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESResultadosDto.Denominacion">
-            <summary>
-            Nombre de la entidad
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESResultadosDto.Sigla">
-            <summary>
-            Abreviatura de la entidad
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESResultadosDto.Categoria_Matricula">
-            <summary>
-            Indica la categoría de la entidad (Persona jurídica, sociedad, establecimiento de comercio, etc)
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESResultadosDto.Municipio">
-            <summary>
-            Municipio donde reside la entidad
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESResultadosDto.EstadoRM">
-            <summary>
-            Estado registro mercantil
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Colombia - Consulta RUES.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackColombiaRUESOutput.PackColombiaRUES">
-            <summary>
-            La información de respuesta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENDto">
-            <summary>
-            Modelo de Pack Ecuador - Antecedentes Penales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENDto.Identificacion">
-            <summary>
-            Número de identificación
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENDto.Tipo_Identificacion">
-            <summary>
-            Tipo de identificación de la persona buscada
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENDto.Denominacion">
-            <summary>
-            Nombre de la persona buscada
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENDto.Resultado">
-            <summary>
-            Indica si tiene, o no, antecedentes penales
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Ecuador - Antecedentes Penales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorANTPENOutput.PackEcuadorANTPEN">
-            <summary>
-            La información devuelta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackEcuadorGAFIDto">
-            <summary>
-            Modelo de Pack Ecuador - GAFI.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorGAFIDto.Pais">
-            <summary>
-            País
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorGAFIDto.Observaciones">
-            <summary>
-            Observaciones
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorGAFIDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorGAFIDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackEcuadorGAFIOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Ecuador - GAFI.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorGAFIOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorGAFIOutput.PackEcuadorGAFI">
-            <summary>
-            La información devuelta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackEcuadorPROJUDDto">
-            <summary>
-            Modelo de Pack Colombia - Antecedentes Judiciales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorPROJUDDto.Fecha_Ingreso">
-            <summary>
-            Fecha de ingreso
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorPROJUDDto.Expediente">
-            <summary>
-            Número de expediente
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorPROJUDDto.Infraccion">
-            <summary>
-            Motivo de la infracción
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorPROJUDDto.Error">
-            <summary>
-            Mensaje de error.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorPROJUDDto.Codigo">
-            <summary>
-            Codigo de error.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.LdiModule.Search.PackEcuadorPROJUDOutput">
-            <summary>
-            Output Dto del método de búsqueda de Pack Ecuador - Procesos Judiciales.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorPROJUDOutput.Message">
-            <summary>
-            Mensaje a mostrar al usuario cuando no se puede obtener la información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.PackEcuadorPROJUDOutput.PackEcuadorPROJUD">
-            <summary>
-            La información devuelta.
-            </summary>
-        </member>
         <member name="T:Worldsys.Compliance.LdiModule.Search.SearchBulletinsInput">
             <summary>
             Input Dto para recibor información a buscar en boletines oficiales.
@@ -5545,36 +4892,6 @@
             Identificación tributaria buscada.
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.SearchSourcesInput.SearchedPersonType">
-            <summary>
-            Colombia - Tipo de Persona buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.SearchSourcesInput.SearchedIdentificationType">
-            <summary>
-            Colombia - Tipo de Identificación buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.SearchSourcesInput.SearchedExpeditionDate">
-            <summary>
-            Colombia - Fecha de Expedición buscada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.SearchSourcesInput.SearchedRol">
-            <summary>
-            Colombia - Rol buscado.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.SearchSourcesInput.SearchedTipoDocumento">
-            <summary>
-            Argentina - Tipos de Documentos.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.SearchSourcesInput.SearchedSexo">
-            <summary>
-            Argentina - Sexo.
-            </summary>
-        </member>
         <member name="P:Worldsys.Compliance.LdiModule.Search.SearchSourcesInput.FactorSimilitud">
             <summary>
             Factor de similitud.
@@ -5660,11 +4977,6 @@
         <member name="P:Worldsys.Compliance.LdiModule.Search.SearchViewModel.Configuration">
             <summary>
             Configuración de búsqueda.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.LdiModule.Search.SearchViewModel.Features">
-            <summary>
-            Indica las características premium habilitadas.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.Search.SearchViewModel.IsServiceConfigured">
@@ -5760,9 +5072,29 @@
             Configuración del endpoint del servicio de información fiscal.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Settings.LdiSettingsEditDto.InformacionGafiSettings">
+            <summary>
+            Configuración del endpoint del servicio de información GAFI.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.LdiModule.Settings.LdiSettingsEditDto.MoreInfoSearchSettings">
             <summary>
             Configuración del endpoint del servicio de más información.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Settings.LdiSettingsEditDto.PackArgentinaDocumentosCuestionadosSettings">
+            <summary>
+            Configuración del endpoint del servicio de documentos cuestionados de Argentina.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Settings.LdiSettingsEditDto.PackArgentinaSujetoObligadoSettings">
+            <summary>
+            Configuración del endpoint del servicio de información de sujeto obligado de Argentina.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.LdiModule.Settings.LdiSettingsEditDto.PackEcuadorSettings">
+            <summary>
+            Configuración del endpoint del servicio de información del pack de Ecuador.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.Settings.LdiSettingsEditDto.SourcesSearchSettings">
