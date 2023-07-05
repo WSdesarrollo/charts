@@ -1,4 +1,4 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 
 # Create a group and user
 RUN groupadd -r backend && useradd -r -g backend -m backend
