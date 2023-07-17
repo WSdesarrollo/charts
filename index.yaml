@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   compliance-backend:
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.769264807Z"
+    created: "2023-07-17T00:14:03.797500444Z"
     description: A Helm chart for Kubernetes
     digest: 55b7e22ed702d82f3567596d029d32dfbad03c6b3499c28307a400751a20889b
     name: compliance-backend
@@ -11,7 +11,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230716.3.tgz
     version: "20230716.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.768608194Z"
+    created: "2023-07-17T00:14:03.790496088Z"
     description: A Helm chart for Kubernetes
     digest: 49dc6c5561f39af9bce4aa7dbc5e588d975c5f793a00fc338ce46f19177e83bc
     name: compliance-backend
@@ -20,7 +20,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230716.2.tgz
     version: "20230716.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.767953581Z"
+    created: "2023-07-17T00:14:03.790058484Z"
     description: A Helm chart for Kubernetes
     digest: 8240d92008b24a49b61ac8f65e32205f7fba8bc2237717c7c46b33b047f24f7a
     name: compliance-backend
@@ -29,7 +29,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230712.2.tgz
     version: "20230712.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.765093125Z"
+    created: "2023-07-17T00:14:03.789645381Z"
     description: A Helm chart for Kubernetes
     digest: fdbfd87d9e3a5a2bd93d230c2fabd55c923a57fcbe1bcdcbd8a62420bb981c9f
     name: compliance-backend
@@ -38,7 +38,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230712.1.tgz
     version: "20230712.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.764593115Z"
+    created: "2023-07-17T00:14:03.789238778Z"
     description: A Helm chart for Kubernetes
     digest: 1a581ab084a02bfaff3b66087637676331fad96a4808ce5eb2b4c5ef5c239d57
     name: compliance-backend
@@ -47,7 +47,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230711.1.tgz
     version: "20230711.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.764167207Z"
+    created: "2023-07-17T00:14:03.788867775Z"
     description: A Helm chart for Kubernetes
     digest: df7bff58a9fd7db9cf406e3fe4bebab01451cc744d62a2f7745b2b4e7d847989
     name: compliance-backend
@@ -56,7 +56,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230710.3.tgz
     version: "20230710.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.763759599Z"
+    created: "2023-07-17T00:14:03.788499672Z"
     description: A Helm chart for Kubernetes
     digest: b2c56f8b6d1ecfca44198cac8fa2fe5b3572290341003099c0dc187765aeb59c
     name: compliance-backend
@@ -65,7 +65,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230710.2.tgz
     version: "20230710.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.76331759Z"
+    created: "2023-07-17T00:14:03.788123369Z"
     description: A Helm chart for Kubernetes
     digest: aca6e890e88bc2c473730ef29945ca4bdd8f618ce17c4888db054a2f0fa83072
     name: compliance-backend
@@ -74,7 +74,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230710.1.tgz
     version: "20230710.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.762895082Z"
+    created: "2023-07-17T00:14:03.787713765Z"
     description: A Helm chart for Kubernetes
     digest: e7624d441fd0bde73020e07521be4c1dd3c5dcd3a0a43d09ec797b8255c8985d
     name: compliance-backend
@@ -83,7 +83,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230706.1.tgz
     version: "20230706.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.762460173Z"
+    created: "2023-07-17T00:14:03.787338762Z"
     description: A Helm chart for Kubernetes
     digest: f95b9d3fcf360393a7248e8969e90cfabdf3acd24c5af00371b166d58157c6f8
     name: compliance-backend
@@ -92,7 +92,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230705.3.tgz
     version: "20230705.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.762023165Z"
+    created: "2023-07-17T00:14:03.786964859Z"
     description: A Helm chart for Kubernetes
     digest: 7e2f53cb9e0f67d7d4544ec1427b98a2135c39604cffc9d9ea898f810b41573b
     name: compliance-backend
@@ -101,7 +101,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230705.2.tgz
     version: "20230705.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.761605656Z"
+    created: "2023-07-17T00:14:03.786583856Z"
     description: A Helm chart for Kubernetes
     digest: 7fe7b8042adabcf451572df7b59342220af551a9b9fae0db8c55f0a28cf94a52
     name: compliance-backend
@@ -110,7 +110,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230704.6.tgz
     version: "20230704.6"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.761165548Z"
+    created: "2023-07-17T00:14:03.786201353Z"
     description: A Helm chart for Kubernetes
     digest: 314263ed26c99c1ad68e511ca37a3df691eacb93a4f9c7b3e2e9b21afa459e9f
     name: compliance-backend
@@ -119,7 +119,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230704.5.tgz
     version: "20230704.5"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.760710639Z"
+    created: "2023-07-17T00:14:03.78579575Z"
     description: A Helm chart for Kubernetes
     digest: 95eca6916b734462f1d0e7e469593c665f05b8c8355c683c1c83fb1bbb2049cc
     name: compliance-backend
@@ -128,7 +128,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230704.4.tgz
     version: "20230704.4"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.76027573Z"
+    created: "2023-07-17T00:14:03.785398347Z"
     description: A Helm chart for Kubernetes
     digest: 9fe178338014b26a1a8d50a0e9c2ebfd4399e36addcd142ba37880dd1f5bcb8c
     name: compliance-backend
@@ -137,7 +137,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230704.3.tgz
     version: "20230704.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.759800421Z"
+    created: "2023-07-17T00:14:03.785005844Z"
     description: A Helm chart for Kubernetes
     digest: 44645bdde6eaa8e5610defb98568de9c16a809996d41fc5b222ccfcb46fa3923
     name: compliance-backend
@@ -146,7 +146,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230703.3.tgz
     version: "20230703.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.759368612Z"
+    created: "2023-07-17T00:14:03.78460224Z"
     description: A Helm chart for Kubernetes
     digest: 5c24420bc850116a7b11d94991121520975a23950f1f4c507f2cc8ebc4a4e48a
     name: compliance-backend
@@ -155,7 +155,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230703.2.tgz
     version: "20230703.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.758904703Z"
+    created: "2023-07-17T00:14:03.784223537Z"
     description: A Helm chart for Kubernetes
     digest: e54d2776f011dfec2a2f43ce69b718d7e7de969d12cd9855457e117ec6fe3ffe
     name: compliance-backend
@@ -164,7 +164,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230703.1.tgz
     version: "20230703.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.758405193Z"
+    created: "2023-07-17T00:14:03.783836834Z"
     description: A Helm chart for Kubernetes
     digest: 15923d76dff2a70ca09e5a96cb9f019e74ef5d0e1e1a807d8f553158da1a2247
     name: compliance-backend
@@ -173,7 +173,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230617.2.tgz
     version: "20230617.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.757949284Z"
+    created: "2023-07-17T00:14:03.783433131Z"
     description: A Helm chart for Kubernetes
     digest: 084df1148e3fb5e676fc47d4e21645738a867d601eb3f38ac5954546ec029cb4
     name: compliance-backend
@@ -182,7 +182,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230617.1.tgz
     version: "20230617.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.757499775Z"
+    created: "2023-07-17T00:14:03.783006528Z"
     description: A Helm chart for Kubernetes
     digest: 148d6949df2b14e3601d4a94188f9ec184056e943bdd042b50936c41465d436c
     name: compliance-backend
@@ -191,7 +191,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-backend/compliance-backend-20230616.2.tgz
     version: "20230616.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.756977065Z"
+    created: "2023-07-17T00:14:03.782559324Z"
     description: A Helm chart for Kubernetes
     digest: 96def10f6e2d6bc3a9a88469e4f98d8528972798c146d7428f435ca59024e3f7
     name: compliance-backend
@@ -201,7 +201,7 @@ entries:
     version: "20230616.1"
   compliance-frontend:
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.776417948Z"
+    created: "2023-07-17T00:14:03.803939895Z"
     description: A Helm chart for Kubernetes
     digest: 29068637dafc7f6641cfbfc457af72b605e3420c5863796c77867fb2088f1639
     name: compliance-frontend
@@ -210,7 +210,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230713.1.tgz
     version: "20230713.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.77600274Z"
+    created: "2023-07-17T00:14:03.803553492Z"
     description: A Helm chart for Kubernetes
     digest: eb69f8171ce2ea056c0a4f6602e47c9f2cd09dfc93f2cc7e0c6ee17c3758ca71
     name: compliance-frontend
@@ -219,7 +219,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230712.3.tgz
     version: "20230712.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.775575932Z"
+    created: "2023-07-17T00:14:03.803161789Z"
     description: A Helm chart for Kubernetes
     digest: 48ea1a216b32c4207fd20dd10497ccb7a6f07e94038ac34290204d1c8690b8fb
     name: compliance-frontend
@@ -228,7 +228,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230712.2.tgz
     version: "20230712.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.775138723Z"
+    created: "2023-07-17T00:14:03.802749986Z"
     description: A Helm chart for Kubernetes
     digest: 04f365d417fa5ffc5895b2ffe2a28c673f9c58758e30f98cba74adf13dc492f5
     name: compliance-frontend
@@ -237,7 +237,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230712.1.tgz
     version: "20230712.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.774719115Z"
+    created: "2023-07-17T00:14:03.802334583Z"
     description: A Helm chart for Kubernetes
     digest: b72bf611d5c187a65102504257d82dbb5c8ba059b17211f02b6c4a90e897bd40
     name: compliance-frontend
@@ -246,7 +246,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230711.2.tgz
     version: "20230711.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.774292406Z"
+    created: "2023-07-17T00:14:03.801912779Z"
     description: A Helm chart for Kubernetes
     digest: 775ac503d2423f43bb7e8f0b02935f85fc1776710d2ec4fe378054b17cd1a420
     name: compliance-frontend
@@ -255,7 +255,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230711.1.tgz
     version: "20230711.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.773887899Z"
+    created: "2023-07-17T00:14:03.801513576Z"
     description: A Helm chart for Kubernetes
     digest: 2ef8f7c2b96e02ab58eb8fd4bae98df6682dfa8539936cd287ca9aece1a8b1e4
     name: compliance-frontend
@@ -264,7 +264,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230710.3.tgz
     version: "20230710.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.773491091Z"
+    created: "2023-07-17T00:14:03.801116873Z"
     description: A Helm chart for Kubernetes
     digest: bb89db41f767161531c0321071658bbb5b8bffbf257cd0328e622a96a8494f5e
     name: compliance-frontend
@@ -273,7 +273,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230710.2.tgz
     version: "20230710.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.773093283Z"
+    created: "2023-07-17T00:14:03.80071167Z"
     description: A Helm chart for Kubernetes
     digest: ae8f23701f9ee787a6ac3210ef065b8b4b457e8d7227032519a6d24e1455c20c
     name: compliance-frontend
@@ -282,7 +282,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230710.1.tgz
     version: "20230710.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.772684475Z"
+    created: "2023-07-17T00:14:03.800307866Z"
     description: A Helm chart for Kubernetes
     digest: 9762780bb9c49999b29197d9ee16c41c8ff326eb96218be277b3549f436e775a
     name: compliance-frontend
@@ -291,7 +291,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230706.8.tgz
     version: "20230706.8"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.772288467Z"
+    created: "2023-07-17T00:14:03.799905263Z"
     description: A Helm chart for Kubernetes
     digest: c5dd8188bcadd511006ec686a1a4dc7ece020d53fa40990c491323f010b36e04
     name: compliance-frontend
@@ -300,7 +300,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230603.14.tgz
     version: "20230603.14"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.771883159Z"
+    created: "2023-07-17T00:14:03.79949476Z"
     description: A Helm chart for Kubernetes
     digest: bdc02de5bbec498ab348dd31fbcda43533d6dfc62d32f73ecefe9b3fc6ce4ebf
     name: compliance-frontend
@@ -309,7 +309,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230603.13.tgz
     version: "20230603.13"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.77141335Z"
+    created: "2023-07-17T00:14:03.799061456Z"
     description: A Helm chart for Kubernetes
     digest: 3f8f16002f9f74d1fe57249ba14a95b1dad6603ea71eb93b78875e87717ebc79
     name: compliance-frontend
@@ -318,7 +318,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230603.12.tgz
     version: "20230603.12"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.77041543Z"
+    created: "2023-07-17T00:14:03.798613453Z"
     description: A Helm chart for Kubernetes
     digest: e735b6f3f528aab03f7f9104f9440498f5dce2483a355094a5e1cb9bc381b22a
     name: compliance-frontend
@@ -327,7 +327,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-frontend/compliance-frontend-20230603.11.tgz
     version: "20230603.11"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.76990792Z"
+    created: "2023-07-17T00:14:03.798142849Z"
     description: A Helm chart for Kubernetes
     digest: 280a90ea30f75447607031a583e99ceb0ae287c84ae2d5f53ebad113abca3a68
     name: compliance-frontend
@@ -337,7 +337,16 @@ entries:
     version: "20230603.10"
   compliance-worker:
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.78663875Z"
+    created: "2023-07-17T00:14:03.813625173Z"
+    description: A Helm chart for Kubernetes
+    digest: 2e4b8d2b01cb27b9ca3405a436b58108c2887ee0d2f7475c1dc11685aa38ad89
+    name: compliance-worker
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker-chart/compliance-worker-20230716.4.tgz
+    version: "20230716.4"
+  - apiVersion: v2
+    created: "2023-07-17T00:14:03.81324887Z"
     description: A Helm chart for Kubernetes
     digest: 698330b24e46951de796458d3d52ba7470063523a432dfdfb9e506cba9336e8a
     name: compliance-worker
@@ -346,7 +355,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker-chart/compliance-worker-20230712.1.tgz
     version: "20230712.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.786251442Z"
+    created: "2023-07-17T00:14:03.812872567Z"
     description: A Helm chart for Kubernetes
     digest: 4667928d7611d306534a449c2d0ba0a3926e78767d5c0b2a3cfa00189142f5ee
     name: compliance-worker
@@ -355,7 +364,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker-chart/compliance-worker-20230710.2.tgz
     version: "20230710.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.785834234Z"
+    created: "2023-07-17T00:14:03.812497464Z"
     description: A Helm chart for Kubernetes
     digest: 43d7acba73cdcad461dce3bb3e726377583a634abb4f23294174334db72d1b6c
     name: compliance-worker
@@ -364,7 +373,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker-chart/compliance-worker-20230710.1.tgz
     version: "20230710.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.785446226Z"
+    created: "2023-07-17T00:14:03.812118761Z"
     description: A Helm chart for Kubernetes
     digest: 4f992b08eb2194d7b2c084ae638f15db272603fd8679893a0c3bd04e80b3c744
     name: compliance-worker
@@ -373,7 +382,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker-chart/compliance-worker-20230705.3.tgz
     version: "20230705.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.785056919Z"
+    created: "2023-07-17T00:14:03.811743558Z"
     description: A Helm chart for Kubernetes
     digest: bc1c1c6f6c79fa3bae9122b3f1f6742d345d91b14bbe88146f880529b9441cec
     name: compliance-worker
@@ -382,7 +391,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker-chart/compliance-worker-20230705.2.tgz
     version: "20230705.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.78463381Z"
+    created: "2023-07-17T00:14:03.811363855Z"
     description: A Helm chart for Kubernetes
     digest: 18a18f7cd01e135afbe75e91e14b7487bd901fc2238ff0923bd428275eaf0b17
     name: compliance-worker
@@ -391,7 +400,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker-chart/compliance-worker-20230621.8.tgz
     version: "20230621.8"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.784223802Z"
+    created: "2023-07-17T00:14:03.810984552Z"
     description: A Helm chart for Kubernetes
     digest: a75290c8b7d31fd860b15d173be8dbc8e51de67afa6782cbcd31339a7b6f4680
     name: compliance-worker
@@ -400,7 +409,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230621.6.tgz
     version: "20230621.6"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.783820394Z"
+    created: "2023-07-17T00:14:03.810602549Z"
     description: A Helm chart for Kubernetes
     digest: 45c3535ded1356452a207dac14b8e1c27eb1b281e198b0daaf5c52db4255beb1
     name: compliance-worker
@@ -409,7 +418,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230621.5.tgz
     version: "20230621.5"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.783410386Z"
+    created: "2023-07-17T00:14:03.810200646Z"
     description: A Helm chart for Kubernetes
     digest: f6ae8b9a1c8e33691b799cf8cf06e06f52a29ee3cd94a0d73f07adb321a4fd7d
     name: compliance-worker
@@ -418,7 +427,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230621.4.tgz
     version: "20230621.4"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.783009378Z"
+    created: "2023-07-17T00:14:03.809774942Z"
     description: A Helm chart for Kubernetes
     digest: 148a4f0b9760644808ed3b8a1789cc7dedeb7a58a6a21c38654f49898f8885ed
     name: compliance-worker
@@ -427,7 +436,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230621.3.tgz
     version: "20230621.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.78260327Z"
+    created: "2023-07-17T00:14:03.809384439Z"
     description: A Helm chart for Kubernetes
     digest: fe7a19b0dab996a5ecf64772762f014e66e23204d79bfa7f024df3e5c5ff0156
     name: compliance-worker
@@ -436,7 +445,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230621.2.tgz
     version: "20230621.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.782169462Z"
+    created: "2023-07-17T00:14:03.808977636Z"
     description: A Helm chart for Kubernetes
     digest: 8a264f430089922b3aff6ea713d55e66e7c0e2f925e9e40d14497cd00dcb8e63
     name: compliance-worker
@@ -445,7 +454,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230621.1.tgz
     version: "20230621.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.781731953Z"
+    created: "2023-07-17T00:14:03.808551632Z"
     description: A Helm chart for Kubernetes
     digest: 629f63d7bae126369f444b4b799598fc231ed48f0453caf2ac81a91a609dc409
     name: compliance-worker
@@ -454,7 +463,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230617.3.tgz
     version: "20230617.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.781272944Z"
+    created: "2023-07-17T00:14:03.808124429Z"
     description: A Helm chart for Kubernetes
     digest: 83a2875e739bb0fcd7913ccb7676a4815dd1409a0c76488e7691569029361acd
     name: compliance-worker
@@ -463,7 +472,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230617.2.tgz
     version: "20230617.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.780517529Z"
+    created: "2023-07-17T00:14:03.807503724Z"
     description: A Helm chart for Kubernetes
     digest: 628ce59d8d6ef7a7a81f5d897daba6fcce59f2bd6cbf175d3c81119f59885328
     name: compliance-worker
@@ -472,7 +481,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230617.1.tgz
     version: "20230617.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.778786195Z"
+    created: "2023-07-17T00:14:03.806553716Z"
     description: A Helm chart for Kubernetes
     digest: b1cb2cf091c74dd08ddc5463753fff3ed67f06fd922e14431d96e15fce0aa1f3
     name: compliance-worker
@@ -481,7 +490,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230616.5.tgz
     version: "20230616.5"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.778409288Z"
+    created: "2023-07-17T00:14:03.80576851Z"
     description: A Helm chart for Kubernetes
     digest: 015dbb242706e2fa63ab2f96631e8516796a111b4da487235e66949d83a3bff1
     name: compliance-worker
@@ -490,7 +499,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230616.4.tgz
     version: "20230616.4"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.77802928Z"
+    created: "2023-07-17T00:14:03.805405307Z"
     description: A Helm chart for Kubernetes
     digest: c9fbff20f979e0e2001632df4cd79d822f6a5faeb8227811b56a17525a4a66b2
     name: compliance-worker
@@ -499,7 +508,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230616.3.tgz
     version: "20230616.3"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.777642673Z"
+    created: "2023-07-17T00:14:03.805041604Z"
     description: A Helm chart for Kubernetes
     digest: 966a2e791f2c8ca35a2cfe68b20f3d568a2fce6ccf7c845279790903d9915ac1
     name: compliance-worker
@@ -508,7 +517,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230616.2.tgz
     version: "20230616.2"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.777237565Z"
+    created: "2023-07-17T00:14:03.804673701Z"
     description: A Helm chart for Kubernetes
     digest: e0dcd43926b53a5afd085882ba8201ec8d468762b79312a495f70eacfb01da0f
     name: compliance-worker
@@ -517,7 +526,7 @@ entries:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230616.1.tgz
     version: "20230616.1"
   - apiVersion: v2
-    created: "2023-07-16T23:17:32.776829557Z"
+    created: "2023-07-17T00:14:03.804308098Z"
     description: A Helm chart for Kubernetes
     digest: eb8ca733bdc4722a21bec887071a07129e40650dfc62138d6e2fc34bda5954ce
     name: compliance-worker
@@ -525,4 +534,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/wsdesarrollo/charts/main/compliance-worker/compliance-worker-20230615.5.tgz
     version: "20230615.5"
-generated: "2023-07-16T23:17:32.756150349Z"
+generated: "2023-07-17T00:14:03.781807018Z"
