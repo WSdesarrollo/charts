@@ -37,6 +37,16 @@
             Devuelve el Id de suscriptor actual o lanza <see cref="T:Abp.UI.UserFriendlyException"/>.
             </summary>
         </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoApplicationServiceBase.GetImpactos(System.String)">
+            <summary>
+            Colección de opciones de impacto para el tamaño especificado.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoApplicationServiceBase.GetProbabilidades(System.String)">
+            <summary>
+            Colección del opciones de probbilidad para el tamaño espacificado.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.RoAuthorizationProvider">
             <summary>
             Provee los permisos del módulo Riesgo Operativo.
@@ -57,9 +67,9 @@
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.RoModule.RoControlesApplicationService"/>.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.CreateControlEjecucionOrGetTheCurrentOne(Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput)">
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.CreateEjecucion(Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput)">
             <summary>
-            Crea una nueva ejecución de control o devuelve la ejecución actualmente en progreso.
+            Crea una nueva ejecución de control.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.CreateOrUpdateControl(Worldsys.Compliance.RoModule.Parametrization.RoControlEditInput)">
@@ -72,7 +82,12 @@
             Elimina un control (soft delete).
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetControlEjecucion(System.String)">
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetActiveControlEjecucion(System.String)">
+            <summary>
+            Recupera el Id de la ejecución de control activa para el control especificado.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetControlEjecucionForTreatment(System.String)">
             <summary>
             Recupera una ejecución de control.
             </summary>
@@ -85,6 +100,11 @@
         <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetControlForEdit(Abp.Application.Services.Dto.EntityDto{System.String})">
             <summary>
             Recupera la información para el diálogo de edición de control.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetCreateEjecucionDialogData(System.String)">
+            <summary>
+            Recupera la información para el diálogo de creación de ejecución.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.GetEjecucionHistoryForControl(System.String)">
@@ -112,6 +132,11 @@
             Registra la ejecución del control.
             </summary>
         </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoControlesApplicationService.SaveControlEjecucion(Worldsys.Compliance.RoModule.Operational.RoControlEjecucionEditInput)">
+            <summary>
+            Guarda la información de ejecución del control como parte de un proceso workflow.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.RoFeatureProvider">
             <summary>
             Provee las Features del módulo Riesgo Operativo.
@@ -120,6 +145,16 @@
         <member name="M:Worldsys.Compliance.RoModule.RoFeatureProvider.SetFeatures(Abp.Application.Features.IFeatureDefinitionContext)">
             <summary>
             Sets the feature.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.RoNotificationProvider">
+            <summary>
+            Proveedor de notifcaciones del módulo de Riesgo Operativo.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoNotificationProvider.SetNotifications(Abp.Notifications.INotificationDefinitionContext)">
+            <summary>
+            Inicializa las notificaciones del módulo.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService">
@@ -132,7 +167,7 @@
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService"/>.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService.GetPlanDeAccion(System.String)">
+        <member name="M:Worldsys.Compliance.RoModule.RoPlanDeAccionApplicationService.GetPlanDeAccionForTreatment(System.String)">
             <summary>
             Recupera un plan de acción.
             </summary>
@@ -158,12 +193,12 @@
             y plane de acción de Riesgo Operativo.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.#ctor">
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.#ctor(Abp.Notifications.INotificationPublisher,Abp.Localization.IApplicationLanguageManager,Worldsys.Compliance.Workflows.WorkflowService)">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.RoModule.RoProcessService"/>.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.CreateControlEjecucionOrGetTheCurrentOneAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput)">
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.CreateControlEjecucionAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput)">
             <summary>
             Crea una nueva ejecución de control o devuelve la ejecución actualmente en progreso.
             </summary>
@@ -177,6 +212,19 @@
                 Lanzada para reportar errores de validación.
             </exception>
         </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.GetActiveControlEjecucionIdForControlAsync(System.Int32,System.String)">
+            <summary>
+            Recupera el Id de la de ejecución de control activa para el <paramref name="controlId"/> especificado.
+            </summary>
+            <param name="tenantId">Id de suscriptor.</param>
+            <param name="controlId">Id de control.</param>
+            <returns>
+                Id de la ejecución de control activa.
+            </returns>
+            <exception cref="T:Abp.UI.UserFriendlyException">
+                <para>Lanzada para reportar errores de validacón.</para>
+            </exception>
+        </member>
         <member name="M:Worldsys.Compliance.RoModule.RoProcessService.RegisterControlEjecucionAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoControlEjecucionEditInput)">
             <summary>
             Registra la ejecución del control.
@@ -184,6 +232,18 @@
             <param name="tenantId">Id del suscriptor.</param>
             <param name="userId">Id del usuario.</param>
             <param name="input">Información para procesar el registro de la ejecución del control.</param>
+            <exception cref="T:Abp.UI.UserFriendlyException">
+                Lanzada para reportar errores de validación.
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.SaveControlEjecucionAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoControlEjecucionEditInput)">
+            <summary>
+            Guarda la información de ejecución del control sin finalizar la ejecución.
+            Este método es llamado durante la ejecución del control dentro de un workflow.
+            </summary>
+            <param name="tenantId">Id de suscriptor.</param>
+            <param name="userId">Id de usuario.</param>
+            <param name="input">Información a guardar proveniente del usuario.</param>
             <exception cref="T:Abp.UI.UserFriendlyException">
                 Lanzada para reportar errores de validación.
             </exception>
@@ -204,7 +264,7 @@
             <param name="userId">Id del usuario.</param>
             <param name="input">Información para crear la evaluación de riesgo.</param>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.CreateRiskEvaluationOrGetTheCurrentOneAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput)">
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.CreateRiskEvaluationAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput)">
             <summary>
             Crea una nueva evaluación de riesgos o devuelve la evaluación actual en progreso.
             </summary>
@@ -218,6 +278,31 @@
                 Lanzada para reportar errores de validación.
             </exception>
         </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.GetActiveRiskEvaluationForRiskAsync(System.Int32,System.String)">
+            <summary>
+            Recupera el Id de la de evaluación de riesgo activa para el <paramref name="riskId"/> especificado.
+            </summary>
+            <param name="tenantId">Id de suscriptor.</param>
+            <param name="riskId">Id del nodo de riesgo.</param>
+            <returns>
+                Id de la evaluación de riesgo activa.
+            </returns>
+            <exception cref="T:Abp.UI.UserFriendlyException">
+                <para>Lanzada para reportar errores de validacón.</para>
+            </exception>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.GetNodeResponsibleOUIdAsync(Worldsys.Compliance.RoModule.Parametrization.RoRiskMap)">
+            <summary>
+            Recupera el Id de la unidad organizativa responsable del nodo.
+            </summary>
+            <param name="node">Nodo del mapa de riesgo.</param>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.GetNodeWorkflowDefinitionIdAsync(Worldsys.Compliance.RoModule.Parametrization.RoRiskMap)">
+            <summary>
+            Recupera el Id de la definición del workflow utilizado para gestionar el nodo.
+            </summary>
+            <param name="node">Nodo del mapa de riesgo.</param>
+        </member>
         <member name="M:Worldsys.Compliance.RoModule.RoProcessService.RegisterRiskEvaluationAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationEditInput)">
             <summary>
             Registra la evaluaión del riesgo.
@@ -229,12 +314,24 @@
                 Lanzada para reportar errores de validación.
             </exception>
         </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoProcessService.SaveRiskEvaluationAsync(System.Int32,System.Int64,Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationEditInput)">
+            <summary>
+            Guarda la información de evaluación de riesgos sin finalizar la evaluación.
+            Este método es llamado durante la evaluacón de riesgo dentro de un workflow.
+            </summary>
+            <param name="tenantId">Id de suscriptor.</param>
+            <param name="userId">Id de usuario.</param>
+            <param name="input">Información a guardar proveniente del usuario.</param>
+            <exception cref="T:Abp.UI.UserFriendlyException">
+                Lanzada para reportar errores de validación.
+            </exception>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService">
             <summary>
             Servicios de edición del mapa de riesgos.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.#ctor(Worldsys.Compliance.RoModule.RoProcessService,Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRiskMap,System.String},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification,System.Int64})">
+        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.#ctor(Worldsys.Compliance.RoModule.RoProcessService,Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRiskMap,System.String},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRelationControlRisk,System.Int64},Abp.Domain.Repositories.IRepository{Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeTypification,System.Int64})">
             <summary>
             Inicializa una nueva instancia de <see cref="T:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService"/>.
             </summary>
@@ -304,9 +401,9 @@
             Recupera un nodo borrado del mapa de riesgos.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.CreateRiskEvaluationOrGetTheCurrentOne(Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput)">
+        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.CreateEvaluation(Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput)">
             <summary>
-            Crea una nueva evaluación de riesgos o devuelve la evaluación actual en progreso.
+            Crea una nueva evaluación de riesgos.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.FindWorstChildEvaluationIdOfRiskNode(System.String)">
@@ -314,7 +411,17 @@
             Busca el Id de la peor evaluación de riesgo a partir del Id de evaluación especificado.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.GetEvaluation(System.String)">
+        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.GetActiveRiskEvaluation(System.String)">
+            <summary>
+            Recupera el Id de la evaluación de riesgo activa para el riesgo especificado.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.GetCreateEvaluationDialogData(System.String)">
+            <summary>
+            Recupera la información para el diálogo de creación de evaluación de riesgos.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.GetEvaluationForTreatment(System.String)">
             <summary>
             Recupera una evaluación de riesgo.
             </summary>
@@ -327,6 +434,11 @@
         <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.RegisterRiskEvaluation(Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationEditInput)">
             <summary>
             Registra la evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.RoRiskManagementApplicationService.SaveRiskEvaluation(Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationEditInput)">
+            <summary>
+            Guarda la información de evaluación de riesgo como parte de un proceso workflow.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.RoModule.RoRiskNodeSelectorApplicationService">
@@ -407,6 +519,34 @@
         <member name="M:Worldsys.Compliance.RoModule.Settings.RoSettingsApplicationService.UpdateSettings(Worldsys.Compliance.RoModule.Settings.RoSettingsEditDto)">
             <summary>
             Actualiza los settings.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Visualization.RoVisualizationApplicationService">
+            <summary>
+            Implementa el servicio de visualización de datos.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.Visualization.RoVisualizationApplicationService.GetMapaRiesgoResidual(System.String,System.String)">
+            <summary>
+            Recupera la información para construir un gráfico de burbujas que muestra
+            la relación entre el riesgo inherente y el riesgo residual.
+            </summary>
+            <param name="riskMapId">Id del mapa de riesgo.</param>
+            <param name="parentId">Id del nodo del cual se requieren los datos.</param>
+            <remarks>
+                Si se especifica <paramref name="parentId"/>, se devoverán los valores para los
+                nodos hijos del padre especifcado, de lo contrario se devolveran los valores
+                para todos los riesgos del mapa especificado.
+            </remarks>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.Visualization.RoVisualizationApplicationService.GetRiskCountChartData(System.String)">
+            <summary>
+            Recupera la información para el gráfico que muestra la cantidad de riesgos totales y evaluados.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.Visualization.RoVisualizationApplicationService.GetTopLevelNodes">
+            <summary>
+            Recupera los nodos de primer nivel válidos para selección de mapas de riego.
             </summary>
         </member>
     </members>

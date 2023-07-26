@@ -74,6 +74,16 @@
             Feature que representa al módulo.
             </summary>
         </member>
+        <member name="T:Worldsys.Compliance.RoModule.Consts.Notifications">
+            <summary>
+            Definición de notificaciones del módulo.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.RoModule.Consts.Notifications.WorkItemCreated">
+            <summary>
+            Notificación de creación de un ítem de trabajo.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.Consts.Permissions">
             <summary>
             Definición de los permisos del módulo.
@@ -129,9 +139,9 @@
             Define los servicios de edición de controles.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.CreateControlEjecucionOrGetTheCurrentOne(Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput)">
+        <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.CreateEjecucion(Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput)">
             <summary>
-            Crea una nueva ejecución de control o devuelve la ejecución actualmente en progreso.
+            Crea una nueva ejecución de control.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.CreateOrUpdateControl(Worldsys.Compliance.RoModule.Parametrization.RoControlEditInput)">
@@ -144,7 +154,12 @@
             Elimina un control (soft delete).
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.GetControlEjecucion(System.String)">
+        <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.GetActiveControlEjecucion(System.String)">
+            <summary>
+            Recupera el Id de la ejecución de control activa para el control especificado.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.GetControlEjecucionForTreatment(System.String)">
             <summary>
             Recupera una ejecución de control.
             </summary>
@@ -157,6 +172,11 @@
         <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.GetControlForEdit(Abp.Application.Services.Dto.EntityDto{System.String})">
             <summary>
             Recupera la información para el diálogo de edición de control.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.GetCreateEjecucionDialogData(System.String)">
+            <summary>
+            Recupera la información para el diálogo de creación de ejecución.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.GetEjecucionHistoryForControl(System.String)">
@@ -184,12 +204,17 @@
             Registra la ejecución del control.
             </summary>
         </member>
+        <member name="M:Worldsys.Compliance.RoModule.IRoControlesApplicationService.SaveControlEjecucion(Worldsys.Compliance.RoModule.Operational.RoControlEjecucionEditInput)">
+            <summary>
+            Guarda la información de ejecución del control como parte de un proceso workflow.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.IRoPlanDeAccionApplicationService">
             <summary>
             Define los servicios de aplicación relacionados a planes de acción.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.IRoPlanDeAccionApplicationService.GetPlanDeAccion(System.String)">
+        <member name="M:Worldsys.Compliance.RoModule.IRoPlanDeAccionApplicationService.GetPlanDeAccionForTreatment(System.String)">
             <summary>
             Recupera un plan de acción.
             </summary>
@@ -279,9 +304,9 @@
             Recupera un nodo borrado del mapa de riesgos.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.IRoRiskManagementApplicationService.CreateRiskEvaluationOrGetTheCurrentOne(Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput)">
+        <member name="M:Worldsys.Compliance.RoModule.IRoRiskManagementApplicationService.CreateEvaluation(Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput)">
             <summary>
-            Crea una nueva evaluación de riesgos o devuelve la evaluación actual en progreso.
+            Crea una nueva evaluación de riesgos.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.IRoRiskManagementApplicationService.FindWorstChildEvaluationIdOfRiskNode(System.String)">
@@ -289,7 +314,17 @@
             Busca el Id de la peor evaluación de riesgo a partir del Id de evaluación especificado.
             </summary>
         </member>
-        <member name="M:Worldsys.Compliance.RoModule.IRoRiskManagementApplicationService.GetEvaluation(System.String)">
+        <member name="M:Worldsys.Compliance.RoModule.IRoRiskManagementApplicationService.GetActiveRiskEvaluation(System.String)">
+            <summary>
+            Recupera el Id de la evaluación de riesgo activa para el riesgo especificado.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.IRoRiskManagementApplicationService.GetCreateEvaluationDialogData(System.String)">
+            <summary>
+            Recupera la información para el diálogo de creación de evaluación de riesgos.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.IRoRiskManagementApplicationService.GetEvaluationForTreatment(System.String)">
             <summary>
             Recupera una evaluación de riesgo.
             </summary>
@@ -302,6 +337,11 @@
         <member name="M:Worldsys.Compliance.RoModule.IRoRiskManagementApplicationService.RegisterRiskEvaluation(Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationEditInput)">
             <summary>
             Registra la evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.IRoRiskManagementApplicationService.SaveRiskEvaluation(Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationEditInput)">
+            <summary>
+            Guarda la información de evaluación de riesgo como parte de un proceso workflow.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.RoModule.IRoRiskNodeSelectorApplicationSevice">
@@ -357,7 +397,7 @@
             <summary>
             Representa la ejecución de un control.
             Output Dto for: RoControlEjecucion.
-            Version: 5.
+            Version: 6.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionDto.Control">
@@ -485,6 +525,11 @@
             Id del plan de acción que generó la ejecución del control.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionDto.CreatePlanDeAccionDataId">
+            <summary>
+            Id del registro de serialización de la información para la creación del workflow.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionEditDto">
             <summary>
             Output Dto para la página de ejecución de controles.
@@ -493,6 +538,11 @@
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionEditDto.Ejecucion">
             <summary>
             Control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionEditDto.PlanDeAccion">
+            <summary>
+            Información para crear el plan de acción.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucionEditDto.Efectividades">
@@ -569,6 +619,26 @@
             Información registrada.
             </summary>
         </member>
+        <member name="T:Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditDto">
+            <summary>
+            Output dto para el diálogo de creación de ejecución de control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditDto.Control">
+            <summary>
+            El control a ejecutar.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditDto.OrganizationUnits">
+            <summary>
+            Unidades organizativas disponibles para selección del responsable.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditDto.Workflows">
+            <summary>
+            Definiciones de workflow disponibles para selección.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput">
             <summary>
             Input Dto para crear una ejecución de control.
@@ -602,6 +672,11 @@
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput.FechaFinalProgramada">
             <summary>
             Fecha programada de finalización de la evaluación (opcional).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput.WorkflowDefinitionId">
+            <summary>
+            Id definición de workflow a iniciar.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.Operational.RoCreateControlEjecucionEditInput.Normalize">
@@ -642,6 +717,26 @@
             Normalización.
             </summary>
         </member>
+        <member name="T:Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditDto">
+            <summary>
+            Output dto para el diálogo de creación de evaluación de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditDto.Risk">
+            <summary>
+            El riesgo a evaluar.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditDto.OrganizationUnits">
+            <summary>
+            Unidades organizativas disponibles para selección del responsable.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditDto.Workflows">
+            <summary>
+            Definiciones de workflow disponibles para selección.
+            </summary>
+        </member>
         <member name="T:Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput">
             <summary>
             Input Dto para crear una evaluación de riesgo.
@@ -675,6 +770,11 @@
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput.FechaFinalProgramada">
             <summary>
             Fecha programada de finalización de la evaluación (opcional).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput.WorkflowDefinitionId">
+            <summary>
+            Id definición de workflow a iniciar.
             </summary>
         </member>
         <member name="M:Worldsys.Compliance.RoModule.Operational.RoCreateRiskEvaluationEditInput.Normalize">
@@ -972,6 +1072,11 @@
             Evaluación de riesgo.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationDto.PlanDeAccion">
+            <summary>
+            Información para crear el plan de acción.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationDto.Impactos">
             <summary>
             Opciones de impácto.
@@ -1042,6 +1147,11 @@
             Estrategia utilizada para mitigar el riesgo.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationEditInput.FechaEstimadaDeMitigacion">
+            <summary>
+            Fecha estimada de mitigación.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskEvaluationEditInput.PlanDeAccion">
             <summary>
             Información para la creación del plan de acción.
@@ -1058,7 +1168,7 @@
             <summary>
             Representa una evaluación de riesgos.
             Output Dto for: RoRiskMapEvaluation.
-            Version: 4.
+            Version: 6.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationDto.RiskNode">
@@ -1231,6 +1341,11 @@
             Estrategia utilizada para mitigar el riesgo.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationDto.FechaEstimadaDeMitigacion">
+            <summary>
+            Fecha estimada de mitigación.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationDto.WorkflowInstanceId">
             <summary>
             Id de instancia de workflow.
@@ -1244,6 +1359,11 @@
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationDto.InPlanDeAccionId">
             <summary>
             Id de plan de acción que generó esta evaluacón de riesgos.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationDto.CreatePlanDeAccionDataId">
+            <summary>
+            Id del registro de serialización de la información para la creación del workflow.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLogDto">
@@ -1270,6 +1390,31 @@
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluationSystemLogDto.LogData">
             <summary>
             Información registrada.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Operational.RoWorkItemCreationResult">
+            <summary>
+            Output dto para notificar a la UI el resultado de creación de un ítem de trabajo.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.Operational.RoWorkItemCreationResult.#ctor(System.String)">
+            <summary>
+            Inicializa una nueva instancia de <b>RoWorkItemResult</b>.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoWorkItemCreationResult.NavigateToTreatmentPage">
+            <summary>
+            Indica si la UI debe navegar a la página de tratamiento.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoWorkItemCreationResult.NotificationMessage">
+            <summary>
+            Mensaje a mostrar como notificación en la UI (opcional).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoWorkItemCreationResult.WorkItemId">
+            <summary>
+            Id del ítem de trabajo
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.RoModule.Parametrization.RoControlDto">
@@ -1527,7 +1672,7 @@
             <summary>
             Representa el mapa de riesgos de una organización.
             Output Dto for: RoRiskMap.
-            Version: 4.
+            Version: 5.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapDto.Path">
@@ -1540,6 +1685,16 @@
             Unidad organizativa responsable de este nodo.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapDto.Typifications">
+            <summary>
+            Tipificaciones del nodo del mapa de riesgos.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapDto.Controles">
+            <summary>
+            Controles asociados al nodo de riesgo.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapDto.RiskEvaluation">
             <summary>
             Ultima evaluación de riesgos registrada.
@@ -1548,11 +1703,6 @@
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapDto.WorstChildEvaluation">
             <summary>
             Evalaución del nodo hijo que dió origen a la evaluación de este nodo como la peor evaluación al momento de su ejecución.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapDto.Typifications">
-            <summary>
-            Tipificaciones del nodo del mapa de riesgos.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapDto.LastEvaluations">
@@ -1645,6 +1795,11 @@
             Valor de estrategia de mitigación indicada en la última evaluación registrada del riesgo.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapDto.FechaEstimadaDeMitigacion">
+            <summary>
+            Fecha estimada de mitigación
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapDto.TendenciaRiesgoInherente">
             <summary>
             Tendencia del riesgo inherente.
@@ -1679,7 +1834,7 @@
             <summary>
             Representa el mapa de riesgos de una organización.
             Input Dto for editing: RoRiskMap.
-            Version: 4.
+            Version: 5.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapEditInput.Categories">
@@ -1690,6 +1845,11 @@
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapEditInput.BusinessUnits">
             <summary>
             Unidades de negocio del nodo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapEditInput.Controles">
+            <summary>
+            Controles asociados al nodo de riesgo.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapEditInput.Id">
@@ -1782,6 +1942,11 @@
             Valor de estrategia de mitigación indicada en la última evaluación registrada del riesgo.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapEditInput.FechaEstimadaDeMitigacion">
+            <summary>
+            Fecha estimada de mitigación
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapEditInput.TendenciaRiesgoInherente">
             <summary>
             Tendencia del riesgo inherente.
@@ -1831,6 +1996,11 @@
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeEditDto.Categories">
             <summary>
             Categorías de riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeEditDto.Controles">
+            <summary>
+            Controles disponbles para asociar al riesgo.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMapNodeEditDto.OrganizationUnits">
@@ -2189,6 +2359,74 @@
         <member name="P:Worldsys.Compliance.RoModule.Universal.RoClobDataDto.Data">
             <summary>
             Información.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Visualization.BubbleItem">
+            <summary>
+            Representa un ítem para un gráfico de burbuja.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Visualization.BubbleItem.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Visualization.BubbleItem.Series">
+            <summary>
+            Series del ítem.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Visualization.BubblePoint">
+            <summary>
+            Representa un punto para un gráfico de burbuja.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Visualization.BubblePoint.Name">
+            <summary>
+            Nombre.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Visualization.BubblePoint.X">
+            <summary>
+            X.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Visualization.BubblePoint.Y">
+            <summary>
+            Y.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Visualization.BubblePoint.R">
+            <summary>
+            R.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.RoModule.Visualization.IRoVisualizationApplicationService">
+            <summary>
+            Define el servicio de visualización de datos.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.Visualization.IRoVisualizationApplicationService.GetMapaRiesgoResidual(System.String,System.String)">
+            <summary>
+            Recupera la información para construir un gráfico de burbujas que muestra
+            la relación entre el riesgo inherente y el riesgo residual.
+            </summary>
+            <param name="riskMapId">Id del mapa de riesgo.</param>
+            <param name="parentId">Id del nodo del cual se requieren los datos.</param>
+            <remarks>
+                Si se especifica <paramref name="parentId"/>, se devoverán los valores para los
+                nodos hijos del padre especifcado, de lo contrario se devolveran los valores
+                para todos los riesgos del mapa especificado.
+            </remarks>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.Visualization.IRoVisualizationApplicationService.GetRiskCountChartData(System.String)">
+            <summary>
+            Recupera la información para el gráfico que muestra la cantidad de riesgos totales y evaluados.
+            </summary>
+        </member>
+        <member name="M:Worldsys.Compliance.RoModule.Visualization.IRoVisualizationApplicationService.GetTopLevelNodes">
+            <summary>
+            Recupera los nodos de primer nivel válidos para selección de mapas de riego.
             </summary>
         </member>
     </members>

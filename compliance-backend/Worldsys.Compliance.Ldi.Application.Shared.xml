@@ -3284,14 +3284,14 @@
             Contraseña para conectarse a <b>Elastic Search</b>.
             </summary>
         </member>
-        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.ElasticSearch.IndexName">
-            <summary>
-            Nombre del índice en <b>Elastic Search</b>.
-            </summary>
-        </member>
         <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.ElasticSearch.KeepAliveTcpConnection">
             <summary>
             Indica si el cliente debe mantener la conexión TCL viva.
+            </summary>
+        </member>
+        <member name="F:Worldsys.Compliance.LdiModule.LdiSettingsNames.ElasticSearch.IndexName">
+            <summary>
+            Nombre del índice en <b>Elastic Search</b>.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.LdiModule.LdiSettingsNames.InformacionFiscalSearch">
@@ -3494,7 +3494,7 @@
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.BulletinsQuery.Name">
             <summary>
-            Nombre a buscar (requerido).
+            Nombre a buscar.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.LdiModule.SearchEngines.BulletinsQuery.Document">

@@ -4,575 +4,6 @@
         <name>Worldsys.Compliance.Sos.Core</name>
     </assembly>
     <members>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlert">
-            <summary>
-            Representa una alerta de S.O.S.
-            </summary>
-            <summary>
-            Representa una alerta de S.O.S.
-            Version: 12
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.AlertNo">
-            <summary>
-            Número de alerta.
-            Este valor es generado con un numerador.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.AlertConfigurationId">
-            <summary>
-            Id de configuración de aleta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.PersonId">
-            <summary>
-            Id de persona.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.CreatedOnUtc">
-            <summary>
-            Fecha y hora de creación.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.CreatedByUserId">
-            <summary>
-            Id de usuario creador (opcional).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.WorkflowInstanceId">
-            <summary>
-            Id de instancia de workflow (optional).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.EmpresaOperacionId">
-            <summary>
-            Id de empresa de la operación.
-            Correspondiente a la empresa de la primer operación asociada a la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.SucursalOperacionId">
-            <summary>
-            Id de sucursal de la operación.
-            Correspondiente a la sucursal de la primer operación asociada a la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.EmpresaPersonaId">
-            <summary>
-            Id de empresa de la persona.
-            Correspondiente a la empresa de la persona asociada a la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.SucursalPersonaId">
-            <summary>
-            Id de sucursal de la persona.
-            Correspondiente a la sucursal de la persona asociada a la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.OficialCuentaUserId">
-            <summary>
-            Id del usuario oficial de cuenta (opcional).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.CaseNumber">
-            <summary>
-            Número de caso asociado a la alerta (opcional).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.ExpirationDate">
-            <summary>
-            Fecha de vencimiento (opcional).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.TreatedOnUtc">
-            <summary>
-            Fecha y hora de tratamiento.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.TreatedByUserId">
-            <summary>
-            Id de usuario que trató la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.ForcedClosure">
-            <summary>
-            Indica que el cierre de la alerta fue forzado por el usuario.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.Noncompliance">
-            <summary>
-            <see langword="true"/> cuando se cumplió la condición de auditoría de incumplimiento y se accionó acorde a la misma para esta alerta, de lo contrario <see langword="false"/>.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.NoncomplianceAlert">
-            <summary>
-            <see langword="true"/> si esta alerta es una alerta de auditoría de incumplimiento, de lo contrario <see langword="false"/>.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.NoncomplianceAlertNo">
-            <summary>
-            Número de la alerta generada cuando se cumplió la condición de auditoría de incumplimiento y la acción tomada generó una alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.DisableQualificationChange">
-            <summary>
-            Indica si el usuario puede cambiar la calificación de la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.Qualification">
-            <summary>
-            Calificación final de la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.AlertConfiguration">
-            <summary>
-            Configuración de  alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.Person">
-            <summary>
-            Persona alertada
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.CreatedByUser">
-            <summary>
-            Usuario que creó la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.OficialCuentaUser">
-            <summary>
-            Oficial de cuenta (opcional).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.TreatedByUser">
-            <summary>
-            Usuario que trató la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlert.SystemLogs">
-            <summary>
-            Registros de acciones sobre la alerta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment">
-            <summary>
-            Indice de documentos asociados a alertas.
-            </summary>
-            <summary>
-            Indice de documentos asociados a alertas.
-            Version: 2
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment.AlertId">
-            <summary>
-            Id de alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment.BinaryObjectId">
-            <summary>
-            Id del documento en la tabla BinaryObject.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment.Description">
-            <summary>
-            Título asignado al documento.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment.Notes">
-            <summary>
-            Notas
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment.ExternalIdentifier">
-            <summary>
-            Identificación de la entidad externa de donde se origina el adjunto (opcional).
-            Debe contener el ToString() de GenericIdentifier.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertAttachment.BinaryObject">
-            <summary>
-            Bits del adjunto.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertClobData">
-            <summary>
-            Almacena la información CLOB de alertas.
-            Version: 2
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertClobData.AlertId">
-            <summary>
-            Id de alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertClobData.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertClobData.SerializedSnapshot">
-            <summary>
-            Serialización de estado al momeno de la generación de la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertClobData.Opinion">
-            <summary>
-            Dictamen.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertClobData.ForcedClosureReason">
-            <summary>
-            Razón del cierre forzado.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier">
-            <summary>
-            Registra la identificación de un elemento de origen de alerta como un cliente, operación, etc.
-            </summary>
-            <summary>
-            Registra la identificación de un elemento de origen de alerta como un cliente, operación, etc.
-            Version: 2
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.AlertId">
-            <summary>
-            Id de alerta
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.OriginKind">
-            <summary>
-            Tipo de elemento de origen, por ejemplo: DS:{data-set-name}.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.OriginIdentifier">
-            <summary>
-            Id de elemento de origen.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.IsUnusual">
-            <summary>
-            Indica que el elemeto de origen es inusual, porque no se realiza habitualmente pero no es sospechoso.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.IsUnusualTime">
-            <summary>
-            Fecha y hora en que se marcó el elemento de origen como inusual (UTC).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.IsUnusualUserId">
-            <summary>
-            Id del usuario que marcó el element de origen como inusual.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.IsUnusualReason">
-            <summary>
-            Razón por la cual el elemento de origen es inusual.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginIdentifier.Alert">
-            <summary>
-            Alerta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation">
-            <summary>
-            Registra la identificaciones de las operaciones que dieron origen a las alertas.
-            </summary>
-            <summary>
-            Registra la identificaciones de las operaciones que dieron origen a las alertas.
-            Version: 2
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation.AlertId">
-            <summary>
-            Id de alerta
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation.OperationId">
-            <summary>
-            Id de operación.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation.OperationKind">
-            <summary>
-            Tipo de operación de origen.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation.IsUnusual">
-            <summary>
-            Indica que el elemeto de origen es inusual, porque no se realiza habitualmente pero no es sospechoso.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation.IsUnusualTime">
-            <summary>
-            Fecha y hora en que se marcó el elemento de origen como inusual (UTC).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation.IsUnusualUserId">
-            <summary>
-            Id del usuario que marcó el element de origen como inusual.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation.IsUnusualReason">
-            <summary>
-            Razón por la cual el elemento de origen es inusual.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginOperation.Alert">
-            <summary>
-            Alerta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRule">
-            <summary>
-            Registra las reglas que dieron origen a una alerta.
-            </summary>
-            <summary>
-            Registra las reglas que dieron origen a una alerta.
-            Version: 2
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRule.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRule.AlertId">
-            <summary>
-            Id de alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRule.InfoServiceName">
-            <summary>
-            Nombre del servicio de información.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRule.DataSetName">
-            <summary>
-            Nombre del data set.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRule.OriginOperation">
-            <summary>
-            Cuando el origen de alerta es una operación, este campo tipifica la operación registando el nombre de la tabla de operación donde está almacenada la misma.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRule.IsMatch">
-            <summary>
-            Indica si el resultado es considerado coincidencia o no.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRule.Count">
-            <summary>
-            Cantidad de resultados obtenidos del segmento.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleColumn">
-            <summary>
-            Almacena los títulos de las columnas de las reglas que dieron origen a la alerta.
-            </summary>
-            <summary>
-            Almacena los títulos de las columnas de las reglas que dieron origen a la alerta.
-            Version: 1
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleColumn.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleColumn.RuleId">
-            <summary>
-            Identificación del encabezado de regla (Sos.AlertOriginRule.Id).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleColumn.Order">
-            <summary>
-            Orden.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleColumn.ColumnLabel">
-            <summary>
-            Título de la columna.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleRecord">
-            <summary>
-            Almacena los regitros resultantes de las reglas que dieron origen a la alerta.
-            </summary>
-            <summary>
-            Almacena los regitros resultantes de las reglas que dieron origen a la alerta.
-            Version: 1
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleRecord.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleRecord.RuleId">
-            <summary>
-            Identificación del encabezado de regla (Sos.AlertOriginRule.Id).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleRecord.OriginIdentifier">
-            <summary>
-            Identificador de origen.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleRecord.RecordNumber">
-            <summary>
-            Número de orden de registro.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleRecord.ColumnOrder">
-            <summary>
-            Número de orden de la columna.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertOriginRuleRecord.ColumnValue">
-            <summary>
-            Valor de la columna.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog">
-            <summary>
-            Registro de acciones realizadas sobre una alerta.
-            </summary>
-            <summary>
-            Registro de acciones realizadas sobre una alerta.
-            Version: 3
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog.TenantId">
-            <summary>
-            Id de suscriptor
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog.AlertId">
-            <summary>
-            Id de alerta
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog.LogKind">
-            <summary>
-            Tipo de registro.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog.LogData">
-            <summary>
-            Información registrada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog.Alert">
-            <summary>
-            Alerta a la cual pertenece.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosAlertSystemLog.CreatorUser">
-            <summary>
-            Usuario que creó el registro.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Alerts.SosCase">
-            <summary>
-            Representa un caso que agrupa alertas relacionadas.
-            </summary>
-            <summary>
-            Representa un caso que agrupa alertas relacionadas.
-            Version: 4
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.CaseNo">
-            <summary>
-            Número de caso.
-            El valor de esta propiedad es generado por un numerador.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.CreatedOnUtc">
-            <summary>
-            Fecha y hora de creación del caso.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.CreatedByUserId">
-            <summary>
-            Id de usuario creador (opcional).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.ClosedOnUtc">
-            <summary>
-            Fecha y hora de cerrado.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.ClosedByUserId">
-            <summary>
-            Id de usuario que cerró el caso.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.ForcedClosure">
-            <summary>
-            Indica que el cierre del caso fue forzado por el usuario.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.ForcedClosureReason">
-            <summary>
-            Razón de cierre forzado
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.OriginalAlertId">
-            <summary>
-            Id de alerta original existente al momento de creación del caso.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.Cover">
-            <summary>
-            Carátula.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.Opinion">
-            <summary>
-            Dictámen del usuario que cierra el caso.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.SystemLog">
-            <summary>
-            Información registrada por el sistema relacionada al caso.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.CreatedByUser">
-            <summary>
-            Usuario que creó el caso.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Alerts.SosCase.ClosedByUser">
-            <summary>
-            Usuario que cerró el caso.
-            </summary>
-        </member>
         <member name="T:Worldsys.Compliance.SosModule.Alyc.SosAlycBoleto">
             <summary>
             Boletos de operación del negocio ALYC
@@ -1258,7 +689,7 @@
             </summary>
             <summary>
             Registro de operaciones del negocio bancario.
-            Version: 10
+            Version: 12
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.TenantId">
@@ -1327,9 +758,34 @@
             Id de la cuenta.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.CuentaDestinoId">
+            <summary>
+            Id de cuenta destino (Sos.Cuenta)
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.ProductoId">
             <summary>
             Id de producto
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.CanalOperacionId">
+            <summary>
+            Canal de operación (Descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.ModalidadPagoId">
+            <summary>
+            Modalidad de pago o cobro (Descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.OrigenFondosId">
+            <summary>
+            Origen de fondos (Descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.MotivoOperacionId">
+            <summary>
+            Motivo de la operación (Descriptive)
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.OficialCuentaUserId">
@@ -1367,34 +823,134 @@
             Id de la sucursal de la transacción
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.CodigoSwift">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.TipoRutaId">
             <summary>
-            Código Swift
+            Tipo de ruta (SWIFT/ABA/IBAN/BIC) (Descriptive)
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.OtroBanco">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.CodigoRuta">
             <summary>
-            Información del otro banco relacionado a la operación.
+            Código de ruta
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.OtroCuenta">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.BancoCorresponsal">
             <summary>
-            Información de la otra cuenta relacionada a la operación.
+            Banco intermediario
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.OtroIdPersona">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.BancoDestino">
             <summary>
-            Identificación de la otra persona relacionada a la operación
+            Banco de destino
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.OtroTipoIdPersona">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.BancoGirado">
             <summary>
-            Tipo de identificación de la otra persona relacionada a la operación.
+            Entidad del cheque
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.OtroNombrePersona">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.NroCheque">
             <summary>
-            Nombre de la otra persona relacionada a la operación.
+            Número de cheque
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.PaisOrigenId">
+            <summary>
+            País origen de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.ProvinciaOrigenId">
+            <summary>
+            Provincia origen de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.PaisDestinoId">
+            <summary>
+            País destino de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.ProvinciaDestinoId">
+            <summary>
+            Provincia destino de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.TipoCbuOrigenId">
+            <summary>
+            Tipo de CBU/CVU de origen (descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.CbuOrigen">
+            <summary>
+            Número de CBU/CVU origen.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.TipoCbuDestinoId">
+            <summary>
+            Tipo de CBU/CVU destino (descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.CbuDestino">
+            <summary>
+            Número de CBU/CVU origen.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.BeneficiarioTipoIdentificacionId">
+            <summary>
+            Tipo de identificación del beneficiario (People.IdentificationType)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.BeneficiarioIdentificacion">
+            <summary>
+            Identificación del beneficiario
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.BeneficiarioPersonType">
+            <summary>
+            Tipo de persona del beneficiario
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.BeneficiarioDenominacion">
+            <summary>
+            Denominación del beneficiario
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.Dispositivo">
+            <summary>
+            Dispositivo utilizado en el momento de la operación
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.DispositivoIP">
+            <summary>
+            Dirección IP registrada al momento de la operación
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.ProductoTarjetaId">
+            <summary>
+            Id de producto tarjeta (Sos.ProductoTarjeta)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.ProductoPrestamoId">
+            <summary>
+            Id de producto préstamo (Sos.ProductoPrestamo)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.Capital">
+            <summary>
+            Capital préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.Interes">
+            <summary>
+            Interés préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.Iva">
+            <summary>
+            Iva préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.Comentarios">
+            <summary>
+            Comentarios
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacion.BusinessRulesIdentfier">
@@ -1463,7 +1019,7 @@
             </summary>
             <summary>
             Registro de operaciones borradas del negocio bancario.
-            Version: 10
+            Version: 11
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.TenantId">
@@ -1532,9 +1088,34 @@
             Id de la cuenta.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.CuentaDestinoId">
+            <summary>
+            Id cuenta de destino
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.ProductoId">
             <summary>
             Id de producto
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.CanalOperacionId">
+            <summary>
+            Canal de operación (Descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.ModalidadPagoId">
+            <summary>
+            Modalidad de pago o cobro (Descriptive).
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.OrigenFondosId">
+            <summary>
+            Origen de fondos (Descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.MotivoOperacionId">
+            <summary>
+            Motivo de la operación (Descriptive)
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.OficialCuentaUserId">
@@ -1572,34 +1153,134 @@
             Id de la sucursal de la transacción
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.CodigoSwift">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.TipoRutaId">
             <summary>
-            Código Swift
+            Tipo de ruta (SWIFT/ABA/IBAN/BIC) (Descriptive)
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.OtroBanco">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.CodigoRuta">
             <summary>
-            Información del otro banco relacionado a la operación.
+            Código de ruta
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.OtroCuenta">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.BancoCorresponsal">
             <summary>
-            Información de la otra cuenta relacionada a la operación.
+            Banco intermediario
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.OtroIdPersona">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.BancoDestino">
             <summary>
-            Identificación de la otra persona relacionada a la operación
+            Banco de destino
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.OtroTipoIdPersona">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.BancoGirado">
             <summary>
-            Tipo de identificación de la otra persona relacionada a la operación.
+            Entidad del cheque
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.OtroNombrePersona">
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.NroCheque">
             <summary>
-            Nombre de la otra persona relacionada a la operación.
+            Número de cheque
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.PaisOrigenId">
+            <summary>
+            País origen de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.ProvinciaOrigenId">
+            <summary>
+            Provincia origen de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.PaisDestinoId">
+            <summary>
+            País destino de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.ProvinciaDestinoId">
+            <summary>
+            Provincia destino de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.TipoCbuOrigenId">
+            <summary>
+            Tipo de CBU/CVU de origen (descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.CbuOrigen">
+            <summary>
+            Número de CBU/CVU origen.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.TipoCbuDestinoId">
+            <summary>
+            Tipo de CBU/CVU destino (descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.CbuDestino">
+            <summary>
+            Número de CBU/CVU origen.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.BeneficiarioTipoIdentificacionId">
+            <summary>
+            Tipo de identificación del beneficiario (People.IdentificationType)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.BeneficiarioIdentificacion">
+            <summary>
+            Identificación del beneficiario
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.BeneficiarioPersonType">
+            <summary>
+            Tipo de persona del beneficiario
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.BeneficiarioDenominacion">
+            <summary>
+            Denominación del beneficiario
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.Dispositivo">
+            <summary>
+            Dispositivo utilizado en el momento de la operación
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.DispositivoIP">
+            <summary>
+            Dirección IP registrada al momento de la operación
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.ProductoTarjetaId">
+            <summary>
+            Id de producto tarjeta (Sos.ProductoTarjeta)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.ProductoPrestamoId">
+            <summary>
+            Id de producto préstamo (Sos.ProductoPrestamo)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.Capital">
+            <summary>
+            Capital préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.Interes">
+            <summary>
+            Interés préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.Iva">
+            <summary>
+            Iva préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.Comentarios">
+            <summary>
+            Comentarios
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.BusinessRulesIdentfier">
@@ -1622,14 +1303,14 @@
             Indica si el proceso de generación de alertas fue procesado o no.
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.CreatedByUserId">
-            <summary>
-            Id de usuario que creó la operación.
-            </summary>
-        </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.CreatedOnUtc">
             <summary>
             Fecha y hora de creación original de la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.CreatedByUserId">
+            <summary>
+            Id de usuario que creó la operación.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.DeletedOnUtc">
@@ -1690,6 +1371,226 @@
         <member name="P:Worldsys.Compliance.SosModule.Banking.SosBankingOperacionDeletion.DeletedByUser">
             <summary>
             Usuario que borró la operación
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo">
+            <summary>
+            Registro de préstamos del negocio bancario.
+            </summary>
+            <summary>
+            Registro de préstamos del negocio bancario.
+            Version: 1
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.PrestamoNro">
+            <summary>
+            Número de préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.PrestamoTipoId">
+            <summary>
+            Tipo de préstamo (descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.FechaOtorgamiento">
+            <summary>
+            Fecha de otorgamiento de préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.FechaFinalizacion">
+            <summary>
+            Fecha de finalización de préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Monto">
+            <summary>
+            Monto del préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.PlazoMeses">
+            <summary>
+            Plazo en meses del préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Tna">
+            <summary>
+            Tasa nominal anual del préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Tea">
+            <summary>
+            Tasa efectiva anual del préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Tem">
+            <summary>
+            Tasa efectiva mensual del préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Cft">
+            <summary>
+            Costo financiero total del préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Total">
+            <summary>
+            Total del préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Saldo">
+            <summary>
+            Saldo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Arrepentimiento">
+            <summary>
+            Arrepentimiento del préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Precancelacion">
+            <summary>
+            Precancelación
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Activo">
+            <summary>
+            Estado del préstamo
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.PersonId">
+            <summary>
+            Id de la persona relacionada
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.CuentaId">
+            <summary>
+            Id de la cuenta
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.CanalOperacionId">
+            <summary>
+            Canal de operación (Descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.EmpresaTransId">
+            <summary>
+            Id de empresa de la transacción.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.SucursalTransId">
+            <summary>
+            Id de sucursal de la transacción
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Comentarios">
+            <summary>
+            Comentarios adicionales
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Person">
+            <summary>
+            Persona relacionada a la operación.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Cuenta">
+            <summary>
+            Cuenta de la tarjeta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Empresa">
+            <summary>
+            Empresa
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoPrestamo.Sucursal">
+            <summary>
+            Sucursal
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Banking.ProductoTarjeta">
+            <summary>
+            Registro de tarjetas del negocio bancario.
+            </summary>
+        </member>
+        <member name="T:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta">
+            <summary>
+            Registro de tarjetas del negocio bancario.
+            Version: 1
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.TenantId">
+            <summary>
+            Id de suscriptor
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.TarjetaNro">
+            <summary>
+            Número de tarjeta
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.TarjetaTipoId">
+            <summary>
+            Tipo de tarjeta (descriptive)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.CuentaId">
+            <summary>
+            Id de la cuenta (Sos.Cuenta)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.EmpresaId">
+            <summary>
+            Id de empresa (Commons.Empresa)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.SucursalId">
+            <summary>
+            Id de la sucursal (Commons.Sucursal)
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.Nombre">
+            <summary>
+            Nombre de la persona en la tarjeta
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.Limite">
+            <summary>
+            Límite de la tarjeta
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.FechaEmision">
+            <summary>
+            Fecha de emisión de la tarjeta
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.FechaVencimiento">
+            <summary>
+            Fecha de vencimiento de la tarjeta
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.FechaUltimoMovimiento">
+            <summary>
+            Fecha de último movimiento de la tarjeta
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.Cuenta">
+            <summary>
+            Cuenta de la tarjeta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.Empresa">
+            <summary>
+            Empresa
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Banking.SosProductoTarjeta.Sucursal">
+            <summary>
+            Sucursal
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.SosModule.Concesionarios.SosConcesionariosOperacion">
@@ -2667,143 +2568,6 @@
         <member name="M:Worldsys.Compliance.SosModule.Parametrization.SosAcumulatorConfigurationEqualityComparer.GetHashCode(Worldsys.Compliance.SosModule.Parametrization.SosAcumulatorConfiguration)">
             <summary>
             Gets the hash code.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration">
-            <summary>
-            Representa la configuración de una alerta de S.O.S.
-            </summary>
-            <summary>
-            Representa la configuración de una alerta de S.O.S.
-            Version: 5
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.Name">
-            <summary>
-            Nombre de la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.WorkflowId">
-            <summary>
-            Id de workflow.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.WorkflowMappingMode">
-            <summary>
-            Modo de generación de alertas.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.PersonSkipOption">
-            <summary>
-            Opción de omisión aplicable a la persona.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.GroupPersonInCases">
-            <summary>
-            Indica si las alertas por personas se agrupan en casos.
-            Cuando se genera una alerta para una persona y ya hay una alerta en curso para la misma, la alerta existente
-            y la nueva son agrupadas en un caso. Cuando esto sucede, se genera la nueva alerta pero no se inicia un nuevo workflow.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.DaysToExpiration">
-            <summary>
-            Cantidad de días para el vencimiento de la alerta (opcional).
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.RiskLevel">
-            <summary>
-            Nivel de riesgo asociado a la alerta
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.Documentation">
-            <summary>
-            Documentación relacionada a la alerta.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.SerializedRuleSet">
-            <summary>
-            Serialización de reglas de generación de alertas.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.SerializedAuditoriaIncumplimiento">
-            <summary>
-            Serialización de la configuración de audioría de incumplimiento para esta regla.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.IsEnabled">
-            <summary>
-            Indica si la alerta está habilitada.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.ApprovedOnUtc">
-            <summary>
-            Fecha y hora de aprobación de la configuración.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.ApprovedByUserId">
-            <summary>
-            Id del usuario que aprobó la configuración.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.Workflow">
-            <summary>
-            Configuración del workflow.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertConfiguration.ApprovedByUser">
-            <summary>
-            Usuario que aprobó la configuración de la alerta.
-            </summary>
-        </member>
-        <member name="T:Worldsys.Compliance.SosModule.Parametrization.SosAlertScheduleConfiguration">
-            <summary>
-            Configuración de programación de alertas.
-            Esta configuración agrupa las configuraciones de alertas a procesar de forma recurrente.
-            </summary>
-            <summary>
-            Configuración de programación de alertas.
-            Esta configuración agrupa las configuraciones de alertas a procesar de forma recurrente.
-            Version: 1
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertScheduleConfiguration.IsRunning">
-            <summary>
-            <see langword="true"/> si el proceso está corriendo de lo contrario <see langword="false"/>.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertScheduleConfiguration.LastExecutionId">
-            <summary>
-            Identificación de la última ejecución.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertScheduleConfiguration.LastExecutionUtc">
-            <summary>
-            Fecha y hora de la última ejecución.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertScheduleConfiguration.Name">
-            <summary>
-            Nombre de la programacíón
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertScheduleConfiguration.TenantId">
-            <summary>
-            Id de suscriptor.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertScheduleConfiguration.SerializedAlertConfigurations">
-            <summary>
-            Serialización de las configuraciones de alertas a procesar al ejecutar la programación.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Parametrization.SosAlertScheduleConfiguration.SerializedScheduleConfiguration">
-            <summary>
-            Configuración de programación.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.SosModule.Parametrization.SosAperturacionOperacionCuentaPersonConfig">
@@ -3913,43 +3677,28 @@
             Configuración del acumulador.
             </summary>
         </member>
-        <member name="T:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl">
+        <member name="T:Worldsys.Compliance.SosModule.Universal.SosAlertSnapshotStore">
             <summary>
-            Esta entidad almacena información de control para diferentes procesos internos de reglas de negocios.
+            Almacena fotos de información relacionadas a alertas del sistema.
             </summary>
             <summary>
-            Esta entidad almacena información de control para diferentes procesos internos de reglas de negocios.
-            Version: 4
+            Almacena fotos de información relacionadas a alertas del sistema.
+            Version: 1
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.TenantId">
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosAlertSnapshotStore.AlertId">
+            <summary>
+            Id de alerta.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosAlertSnapshotStore.TenantId">
             <summary>
             Id de suscriptor.
             </summary>
         </member>
-        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.ProcessIdentifier">
+        <member name="P:Worldsys.Compliance.SosModule.Universal.SosAlertSnapshotStore.Snapshot">
             <summary>
-            Identificación del proceso al cual pertenece el registro.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.CreatedOnUtc">
-            <summary>
-            Fecha y hora de creación del registro.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.ElementId">
-            <summary>
-            Id del elemento en proceso.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.ExecutionId">
-            <summary>
-            Identificación de ejecución del proceso que está procesando este elemento.
-            </summary>
-        </member>
-        <member name="P:Worldsys.Compliance.SosModule.Universal.SosBusinessRulesProcessControl.Data">
-            <summary>
-            Información adicional para el proceso.
+            Serialización de la información.
             </summary>
         </member>
         <member name="T:Worldsys.Compliance.SosModule.Universal.SosCaptureBusinessRulesProcessControl">

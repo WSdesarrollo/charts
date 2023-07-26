@@ -10,7 +10,7 @@
             </summary>
             <summary>
             Representa la ejecución de un control.
-            Version: 5
+            Version: 6
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.TenantId">
@@ -101,6 +101,11 @@
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.InPlanDeAccionId">
             <summary>
             Id del plan de acción que generó la ejecución del control.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.CreatePlanDeAccionDataId">
+            <summary>
+            Id del registro de serialización de la información para la creación del workflow.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoControlEjecucion.Control">
@@ -346,7 +351,7 @@
             </summary>
             <summary>
             Representa una evaluación de riesgos.
-            Version: 4
+            Version: 6
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.TenantId">
@@ -469,6 +474,11 @@
             Estrategia utilizada para mitigar el riesgo.
             </summary>
         </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.FechaEstimadaDeMitigacion">
+            <summary>
+            Fecha estimada de mitigación.
+            </summary>
+        </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.WorkflowInstanceId">
             <summary>
             Id de instancia de workflow.
@@ -482,6 +492,11 @@
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.InPlanDeAccionId">
             <summary>
             Id de plan de acción que generó esta evaluacón de riesgos.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.CreatePlanDeAccionDataId">
+            <summary>
+            Id del registro de serialización de la información para la creación del workflow.
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Operational.RoRiskMapEvaluation.RiskNode">
@@ -680,7 +695,7 @@
             </summary>
             <summary>
             Representa el mapa de riesgos de una organización.
-            Version: 4
+            Version: 5
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.TenantId">
@@ -771,6 +786,11 @@
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.EstrategiaDeMitigacion">
             <summary>
             Valor de estrategia de mitigación indicada en la última evaluación registrada del riesgo.
+            </summary>
+        </member>
+        <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.FechaEstimadaDeMitigacion">
+            <summary>
+            Fecha estimada de mitigación
             </summary>
         </member>
         <member name="P:Worldsys.Compliance.RoModule.Parametrization.RoRiskMap.TendenciaRiesgoInherente">
